@@ -1,0 +1,555 @@
+{
+	"Adherent" : {
+		"Description" : "Adherents are called by the divine to act in the world and channel their power. Their favored Stats are Aptitude and Will, they are proficient in Divine Enigmas, Knowledge, Social, and one additional Skill. Adherents have a base HP of 8. They begin with a Basic weapon, Holy Symbol, and a Chain Shirt.",
+		"Stats" : [
+			"Aptitude",
+			"Will"
+		],
+		"Skills" : [
+			"Divine Enigmas",
+			"Knowledge",
+			"Social",
+			"{{Dropdown}}"
+		],
+		"Base HP" : 8,
+		"Equipment" : [
+			[
+				"Club",
+				"Dagger",
+				"Dart",
+				"Greatclub",
+				"Handaxe",
+				"Javelin",
+				"Mace",
+				"Pike",
+				"Quarterstaff",
+				"Sickle",
+				"Sling",
+				"Spear"
+			],
+			"Holy Symbol",
+			"Chain Shirt"
+		],
+		"Features" : {
+			"Divine Conduit" : {
+				"Description" : "Adherents channel spells from a Divine source. Their Spellcasting Bonus is Will+Enigmas, they use a holy symbol as a Foci, and do not need a free hand to cast spells.  They have access to a number of spells as their Aptitude+Knowledge to a minimum of one and two Cantrips. As a Downtime Action they can pray to be granted a different selection of Tier 1 spells. They have a base Burn of 6 that resets after a Long Rest.",		
+				"Enigmas" : {
+					"Spellcasting Bonus" : ["Will", "Divine Enigmas"],
+					"Prepare" : ["Aptitude", "Knowledge"],
+					"To Prepare" : "Downtime",
+					"Cantrips" : 2,
+					"Base Burn" : "6",
+					"Max Tier" : 1
+				}
+			},
+			"Domain" : {
+				"Description" : "Adherents also have specific spells granted to them by their divinity. Every divinity has one or more domains that they have dominion over. Adherents channel their power through one of their divinity's Domains. The Adherent always has the Domain spell prepared and they don't count against the Adherent's list of prepared spells.",
+				"{{Dropdown}}" : {
+					"Items": {
+						"Arcana" : {
+							"Description" : "Grants the Arcane Orb spell",
+							"AddTitle" : "Arcane Orb",
+							"Adds" : "Spell-Arcane Orb"
+						},
+						"Life" : {
+							"Description" : "Grants the Bolster spell",
+							"AddTitle" : "Bolster",
+							"Adds" : "Spell-Bolster"
+						},
+						"Order" : {
+							"Description" : "Grants the Order Spell",
+							"AddTitle" : "Command",
+							"Adds":"Spell-Command"
+						},
+						"Sun" : {
+							"Description":"Grants the Flare spell",
+							"AddTitle" : "Flare",
+							"Adds": "Spell-Flare"
+						},
+						"Tempset" : {
+							"Description": "Grants the Thunderblast spell",
+							"AddTitle" : "Thunderblast",
+							"Adds" : "Spell-Thunderblast"
+						},
+						"War" : {
+							"Description" : "Grants the Bond of War spell",
+							"AddTitle" : "Bond of War",
+							"Adds" : "Spell-Bond of War"
+						}
+					}
+				}
+			}
+		}
+
+	},
+	"Berserker" : {
+		"Description" : "Berserkers channel their primal rage into strength of arms. Their favored Stats are Strength and Fortitude. They are proficient in Athletics, Focus, Weapons, and one additional Skill. Berserkers have a base HP of 12, and begin with a Martial weapon and two Thrown weapons. ",
+		"Stats" : [
+			"Strength",
+			"Fortitude"
+		],
+		"Skills" : [
+			"Athletics",
+			"Focus",
+			"Weapons",
+			"{{Dropdown}}"
+		],
+		"Base HP" : 12,
+		"Equipment" : [
+			[
+				"Crossbow",
+				"Battleaxe",
+				"Flail",
+				"Glaive",
+				"Greataxe",
+				"Greatsword",
+				"Hand Crossbow",
+				"Halberd",
+				"Lance",
+				"Longbow",
+				"Longsword",
+				"Maul",
+				"Morningstar",
+				"Rapier",
+				"Scimitar",
+				"Shortbow",
+				"Shortsword",
+				"Trident",
+				"War Pick",
+				"Warhammer"
+			],
+			[
+				"Dagger",
+				"Dart",
+				"Handaxe",
+				"Javelin",
+				"Spear",
+				"Trident"
+			]
+		],
+		"Features" : {
+			"Rage" : {
+				"Description": "Berserkers have a base Burn of 6 and can fly into a rage with Interaction by making Fortitude+Focus against their current Burn. If they took damage last round they have an Edge on the roll. When they rage, increase their Burn by one. While in a Rage the Berserker adds their Fortitude to damage, has Damage Resistance, and does not go Unconscious when reduced to 0 HP but are Dying. The Rage lasts until they do not roll against an enemy by the end of their turn or they decide to end it.",
+				"Base Burn" : 6,
+				"Interaction" : {
+					"Description" : "While in a Rage the Berserker adds their Fortitude to damage, has Damage Resistance, and does not go Unconscious when reduced to 0 HP but are Dying. ",
+					"Roll" : [
+						"Fortitude",
+						"Focus"
+					],
+					"Vs" : "Burn"
+				}
+			},
+			"Fearsome" : {
+				"Description" : "With a Maneuver the Berserker can intimidate someone within a 6 space Range with a Fortitude+Social roll verses the target's Mind defense to make them Frightened until the end of their next turn.",
+				"Maneuver" : {
+					"Description" : "Frighten target until the end of their next round",
+					"Roll" : [
+						"Fortitude",
+						"Social",
+						"Intimidation"
+					],
+					"Vs" : "Mind",
+					"Target" : "Creature",
+					"Range" : "6",
+					"Effect" : {
+						"Condition" : ["Frightened"]
+					}
+				}
+			}
+
+		}
+	},
+	"Dedicant" : {
+		"Description" : "Dedicants are dedicated to an oath and through that oath they express their life. Their favored Stats are Strength and Will. They are proficient in Athletics, Focus, Weapons, and one additional Skill. Dedicants have a base HP of 10 and begin with a Martial weapon and Chainmail.",
+		"Stats" : [
+			"Strength",
+			"Will"
+		],
+		"Skills" : [
+			"Athletics",
+			"Focus",
+			"Weapons",
+			"{{Dropdown}}"
+		],
+		"Base HP" : 10,
+		"Equipment" : [
+			[
+				"Crossbow",
+				"Battleaxe",
+				"Flail",
+				"Glaive",
+				"Greataxe",
+				"Greatsword",
+				"Hand Crossbow",
+				"Halberd",
+				"Lance",
+				"Longbow",
+				"Longsword",
+				"Maul",
+				"Morningstar",
+				"Rapier",
+				"Scimitar",
+				"Shortbow",
+				"Shortsword",
+				"Trident",
+				"War Pick",
+				"Warhammer"
+			],
+			"Chainmail"
+		],
+		"Features" : {
+			"Channel Oath" : {
+				"Description" : "Dedicant channel the power of their oath to shape the world. Their Spellcasting Bonus is Will+Focus, they can use their weapon as a Foci (or a holy symbol if their oath is religious), and do not need a free hand to cast spells. They know as many Tier 1 spells as their Will+Focus to a minimum of one. Their Fervor resets to 0 that resets after a Short Rest. To cast a spell they need to spend the spell's Tier times 2 worth of Fervor.",
+				"Enigmas" : {
+					"Spellcasting Bonus" : ["Will", "Focus"],
+					"Prepare" : ["Will","Focus"],
+					"Max Tier" : 1,
+					"Fervor" : 0
+				}
+			},
+			"Rebuke" : {
+				"Description" : "As a Response make a Weapon attack against a foe that attacks an ally that Exposes the target.",
+				"Response" : {
+					"Description" : "Make a Weapon attack against a foe that attacks and ally. Expose the target",
+					"Roll" : [
+						"{{Weapon}}"
+					],
+					"Vs" : " {{Weapon}}",
+					"Target" : "Creature",
+					"Range" : "{{Weapon}}",
+					"Effect" : {
+						"Damage" : ["{{Weapon}}"],
+						"Exposes" : true
+					}
+				}
+			},
+			"Rising Fervor" : {
+				"Description" : "The Dedicant gains Fervor each time the Dedicant Exploits a foe",
+				"Action" : {
+					"Exploit" : true,
+					"Roll" : [
+						"{{Weapon}}"
+					],
+					"Vs" : " {{Weapon}}",
+					"Target" : "Creature",
+					"Range" : "{{Weapon}}",
+					"Effect" : {
+						"Damage" : ["{{Weapon}}"]
+					},
+					"Fervor" : 1
+				}
+			},
+			"Smite" : {
+				"Description" : "As an Interaction, the Dedicant can spend 1 Fervor to do an additional 1d8 damage on the previous weapon attack.",
+				"Interaction" : {
+					"Damage" : "D8",
+					"Fervor" : -1
+				}
+			}
+		}
+	} ,
+	"Rogue" : {
+		"Description" : "Rogues are always watching for opportunities they can exploit. Their favored Stats are Dexterity and Wits. They are proficient in Athletics, Weapons, Social, Stealth, and two other skills. Rogues have a base HP of 8. Rogues begin with a Short Sword, a Dagger, and Leather Armor.",
+		"Stats" : [
+			"Dexterity","Wits"
+		],
+		"Skills" : [
+			"Athletics","Social","Stealth","Weapons","{{Dropdown}}","{{Dropdown}}"
+		],
+		"Base HP" : 8,
+		"Equipment" : [
+			"Shortsword",
+			"Dagger",
+			"Leather Armor"
+		],
+		"Features" : {
+			"Slippery" : {
+				"Description" : "As a Maneuver a Rogue can Evade and move their Stride speed.",
+				"Maneuver" : {
+					"Movement" : "{{Stride}}",
+					"Action" : "Evade"
+				}
+			},
+			"Stealthy" : {
+				"Description" : "As a Maneuver a Rogue can Hide and move their Stride speed.",
+				"Maneuver" : {
+					"Movement" : "{{Stride}}",
+					"Action" : "Hide"
+				}
+			},
+			"Sneak Attack" : {
+				"Description" : "As an Action, Exploit a foe by making a Weapons Roll to deal weapon damage and an additional 2d6. ",
+				"Action" : {
+					"Exploit" : true,
+					"Roll" : [
+						"{{Weapon}}"
+					],
+					"Target" : "Creature",
+					"Range" : "{{Weapon}}",
+					"Effect" : {
+						"Damage" : ["{{Weapon}}", "2D6"]
+					}
+				}
+			}
+		}
+	} ,
+	"Scout" : {
+		"Description" : "Scouts are masters of the wilds. Their favored Stats are Dexterity and Wits. They are proficient in, Senses, Stealth, Weapons and one other skill. Scouts have a base HP of 10. They begin with a Scimitar, a Longbow with a quiver of 20 arrows, and Leather Armor.",
+		"Stats" : [
+			"Dexterity",
+			"Wits"
+		],
+		"Skills" : [
+			"Senses",
+			"Stealth",
+			"Weapons",
+			"{{Dropdown}}"
+		],
+		"Base HP" : 10,
+		"Equipment" : [
+			"Scimitar",
+			"Longbow",
+			"{{Quiver}}",
+			"Leather Armor"
+		],
+		"Features" : {
+			"Foebinding" : {
+				"Description":"As an Maneuver a Scout can designate a foe. As long as they make no attacks against other foes or make responses to other foes, the next round they have an additional 1d4 on Weapons and Senses rolls against that foe.",
+				"Maneuver" : {
+					"Target" : "Creature",
+					"Range" : "{{Visible}}",
+					"Effect" : {
+						"Flag" : true,
+						"Damage Bonus" : "1D4"
+					}
+				}
+			},
+			"Wildswalker" : {
+				"Description":"A Scout can move through Difficult Terrain and Hazardous Terrain without a penalty to their speed and can move at full speed while hidden."
+			},
+			"Wildcrafting" : {
+				"Description" : "",
+				"Expertise" : "Wildcrafting"
+			}
+		}
+	} ,
+	"Warrior" : {
+		"Description" : "Warriors specialize in violence. Their favored Stats are Strength and Fortitude. They are proficient in Athletics, Weapons, and two additional Skills. Warriors have a base HP of 10 and begin with a Martial weapon and a Chain Shirt.",
+		"Stats" : [
+			"Strength",
+			"Fortitude"
+		],
+		"Skills" : [
+			"Athletics",
+			"Weapons",
+			"{{Dropdown}}",
+			"{{Dropdown}}"
+		],
+		"Base HP" : 10,
+		"Equipment" : [
+			[
+				"Crossbow",
+				"Battleaxe",
+				"Flail",
+				"Glaive",
+				"Greataxe",
+				"Greatsword",
+				"Hand Crossbow",
+				"Halberd",
+				"Lance",
+				"Longbow",
+				"Longsword",
+				"Maul",
+				"Morningstar",
+				"Rapier",
+				"Scimitar",
+				"Shortbow",
+				"Shortsword",
+				"Trident",
+				"War Pick",
+				"Warhammer"
+			],
+			"Chain Shirt"
+		],
+		"Features" : {
+			"Battle Recovery" : {
+				"Description" : "When taking a Short or Long Rest, Warriors gain 1d8 plus their Fortitude worth of Temporary HP.",
+				"Effect" : {
+					"Temporary HP" : [
+						"1D8",
+						"Fortitude"
+					],
+					"Rest" : [
+						"Short",
+						"Long"
+					]
+				}
+			},
+			"Combat Maneuver" : {
+				"Description" : "As an Action a Warrior can make a Weapons Roll on an Exposed foe. The warrior has an Edge on that attack.",
+				"Action" : {
+					"Exploit" : true,
+					"Edge" : true,
+					"Roll" : [
+						"{{Weapon}}"
+					],
+					"Target" : "Creature",
+					"Range" : "{{Weapon}}",
+					"Effect" : {
+						"Damage" : ["{{Weapon}}", "2D6"]
+					}
+				}
+			},
+			"Martial Training" : {
+				"Description" : "As a Perk for all weapons the Warrior can deal max damage.",
+				"Perk" : {
+					"Trigger" : "Weapon",
+					"Effect" : {
+						"Damage" : ["{{WeaponMax}}"]
+					}
+				}
+			}
+		}
+	} ,
+	"Wildshaper" : {
+		"Description" : "Wildshapers are one with nature. Their favored Stats are Will and Wits, they are proficient in Primal Enigmas, Knowledge, Focus, and one additional Skill. Wildshapers have a base HP of 8. Wildshapers begin with a Basic weapon, leather armor, and a Wildshaper Foci they created.",
+		"Stats" : [
+			"Will",
+			"Wits"
+		],
+		"Skills" : [
+			"Primal Enigmas", "Knowledge","Focus","{{Dropdown}}"
+		],
+		"Base HP" : 8 ,
+		"Equipment" : [
+			[
+				"Club",
+				"Dagger",
+				"Dart",
+				"Greatclub",
+				"Handaxe",
+				"Javelin",
+				"Mace",
+				"Pike",
+				"Quarterstaff",
+				"Sickle",
+				"Sling",
+				"Spear"
+			],
+			"Leather Armor",
+			"Primal Foci"
+		],
+		"Features" : {
+			"Primal Channel":{
+				"Description" : "Spells are revealed to Wildshapers through their connection with the primal forces of nature. Their Spellcasting Bonus is Will+Knowledge and use a Wildshaper Foci or Apothecary Pouch as a Foci. They know as many Tier 1 spells as their Wits+Knowledge and two Cantrips. During a Long Rest they can commune with nature and change the spells they know. They have a starting Burn of 6 that resets after a Long Rest.",
+				"Enigmas" : {
+					"Spellcasting Bonus" : ["Will","Primal Enigmas"],
+					"Prepare" : ["Wits", "Knowledge"],
+					"To Prepare" : "Downtime",
+					"Known" : ["Wits", "Knowledge"],
+					"Cantrips" : 2,
+					"Max Tier" : 1,
+					"Base Burn" : 6
+				}
+			},
+			"Wildshape" : {
+				"Description": "As a Maneuver a Wildshaper can roll against their Burn to polymorph into one of two Beasts of Challenge 2 or lower that the Wildeshaper knows. Communing with nature as a Downtime action they can change what beasts they can polymorph into. They gain the beast's HP inTemporary HP along with its Strength, Fortitude, and Dexterity bonuses. Their Defenses, Deflect and Soak are derived from these new bonuses. When the Wild Shaped Wildshaper's  Temporary HP is reduced to 0 they revert to their natural form and take any additional damage left over from the attack. Wildshaping increases their Burn by 2. The Wildshaper has two shapes they can wildshape into.",
+				"Maneuver" : {
+					"Description" : "Change into known form",
+					"Roll" : ["Will","Focus"],
+					"Vs" : "Burn",
+					"Burn" : 2,
+					"Target" : "Self",
+					"Effect" : {
+						"Shapechange" : {
+							"{{Dropdown}}" : "{{Known}}"
+						}
+					}
+				},
+				"Known" : [
+					[
+						"Donkey",
+						"Flicker Hound",
+						"Horse",
+						"Hunting Hawk",
+						"Mastiff",
+						"Wolf"
+					],
+					[
+						"Donkey",
+						"Flicker Hound",
+						"Horse",
+						"Hunting Hawk",
+						"Mastiff",
+						"Wolf"
+					]
+				]
+			}
+		}
+	},
+	"Wizard" : {
+		"Description" : "Wizards are masters of the arcane. Their favored stats are Aptitude and Will. They are proficient in Arcane Enigmas, Focus, Knowledge, and one additional skill. Wizards have a base HP of 6. Wizards begin with a weapon with the Basic Tag, and an arcane focus or spell component pouch.",
+		"Stats" : [
+			"Aptitude",
+			"Will"
+		],
+		"Skills" : [
+			"Arcane Enigmas","Focus","Knowledge","{{Dropdown}}"
+		],
+		"Base HP" : 6,
+		"Equipment" : [
+			[
+				"Club",
+				"Dagger",
+				"Dart",
+				"Greatclub",
+				"Handaxe",
+				"Javelin",
+				"Mace",
+				"Pike",
+				"Quarterstaff",
+				"Sickle",
+				"Sling",
+				"Spear"
+			],
+			[
+				"Amulet",
+				"Crystal",
+				"Arcane Dagger",
+				"Orb",
+				"Rod",
+				"Spell Component Pouch",
+				"Staff",
+				"Wand"
+			]
+			
+		],
+		"Features" : {
+			"Arcane Initiate" : {
+				"Description" : "",
+				"Enigmas" : {
+					"Spellcasting Bonus" : ["Aptitude", "Arcane Enigmas"],
+					"Prepare" : ["Aptitude", "Knowledge"],
+					"To Prepare" : "Long",
+					"Known" : "{{Spellbook}}",
+					"Cantrips" : 2,
+					"Max Tier": 1,
+					"Base Burn" : 6
+				}
+			},
+			"Ritual Cast" : {
+				"Description" : "The wizard can cast any spell from their spellbook as a Ritual.",
+				"Ritual" : "{{Spellbook}}"
+			},
+			"Spellbook" : {
+				"Description" : "The Wizard records all the spells they know in their Spellbook. They start with two Cantrips and as many Tier 1 spells as their Aptitude+Arcana. They can scribe a new spell from a scroll or other Spellbook into their Spellbook with an Aptitude+Enigma roll. Scribing takes one hour per Spell Tier. The spell takes up two pages per Spell Tier of the spell in the Spellbook. If the Roll fails, the pages the spell would have taken up are ruined. When copying from a Spellbook the character wrote the spell in, they have an Edge to copy it.",
+				"Pages" : 100,
+				"Scribed" : {
+					"Cantrips" : 2,
+					"Tier 1" : "{{Aptitude}}"
+				}
+			}
+		}
+	}
+}

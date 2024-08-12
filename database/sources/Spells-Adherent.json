@@ -1,0 +1,23 @@
+{
+    "Cantrips" : {
+        "Light" : "The target item sheds light as if it were a torch. Enchant an additional item for every Tier the caster is beyond 1st.",
+        "Purifying Flame" : "The target takes 1d8 damage. As a Perk the target is Blinded until the end of their next Turn. Increase the die for every Tier the caster is beyond 1st.",
+        "Whisper of Life": "Target dying creature stabilizes, reset's death saves, and grants 1d6 Temporary HP. As a Perk the target is no longer Unconscious. Target another creature for every tier the caster is beyond 1st.",
+        "Wounding Chant" : "Target takes 1d6 damage. If they are already wounded the target takes 1d10 instead. As a Perk they gain the Bleeding condition. Increase the die for every Tier the caster is beyond 1st."
+    },
+    "Tier 1" : {
+        "Bane" : "Attackers have Edge against all the target's defenses, and Edge on defenses against attacks from target.",
+        "Blessing" : "Creature gains a 1d4 to all d12 rolls. When cast at a higher Tier, target an additional creature for every Tier beyond 1st.",
+        "Bolster" : "Grant the target 1d10+Spellcasting Bonus Temporary HP. Ends the Bleeding condition. When cast at a higher Tier, add an additional 1d8 for every Tier beyond 1st.",
+        "Bond of Ward" : "Target creature gains Edge on defenses and Damage Resistance. The caster can cast spells with the Self or Touch target on the Target creature regardless of how far apart they are. When the target loses HP the caster loses the same amount of HP. When cast at a higher Tier, add an additional creature for every Tier it is cast at beyond 1st.",
+        "Command" : "The caster can speak a two word command to the target becomes Charmed and must attempt it. They cannot attempt to kill themselves.",
+        "Cure Wounds" : "Heal the 1d8+Spellcasting Bonus worth of HP. When cast at a higher Tier, add an additional 1d8 for every Tier beyond 1st.",
+        "Dawning Light" : "The caster glows with true daylight. Allies have an Edge on all rolls against undead or Daylight sensitive creatures. Dispels magical Darkness if affecting target area.",
+        "Divine Armament" : "Conjure flying weapon that deals 1d6 damage that can be directed to move up to 12 spaces and attack as a Maneuver. When cast at a higher Tier, add an additional 1d6 for each tier beyond 1st.",
+        "Divine Investure" : "The caster's weapon bursts with divine energy and deals an additional 1d8 damage. The caster can make a Wits+Weapons roll against a target's React defense within 12 spaces dealing 1d8 damage a target. When cast at a higher Tier, add an additional 1d8 for every Tier beyond 1st.",
+        "Divine Interpose" : "Target adds 1d4 to Soak every time they take damage. Creature can only have this spell cast on them once at a time. When cast at a higher Tier, add an additional creature for every Tier beyond 1st. If cast as a Ritual the duration becomes 1 day.",
+        "Fortify Spirit" : "Allied creatures within the Aura have Edge on Mind defense rolls and are immune to being Frightened.",
+        "Heal" : "The target is healed one level of Blighted and one of the following conditions: Blinded, Bleeding, Deafened, Paralyzed, Petrified, Sickened, or Unconscious. When cast at a higher Tier, heal an additional condition for for every Tier beyond 1st.",
+        "Shield of Faith" : "Target has an Edge on their defenses."
+    }
+}

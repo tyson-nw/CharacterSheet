@@ -1,0 +1,255 @@
+{
+    "Divine Conduit":{
+        "Title":"Divine Conduit",
+        "Tier":1,
+        "Archetype":"Adherent",
+        "Description" : "Adherents channel spells from a Divine source. Their Spellcasting Bonus is Will+Enigmas, they use a holy symbol as a Foci, and do not need a free hand to cast spells.  They have access to a number of spells as their Aptitude+Knowledge to a minimum of one and two Cantrips. As a Downtime Action they can pray to be granted a different selection of Tier 1 spells. They have a base Burn of 6 that resets after a Long Rest.",		
+        "Enigma" : {
+            "Spellcasting Bonus" : ["Will", "Divine Enigmas"],
+            "Prepare" : ["Aptitude", "Knowledge"],
+            "To Prepare" : "Downtime",
+            "Cantrips" : 2,
+            "Base Burn" : "6",
+            "Max Tier" : 1
+        }
+    },
+    "Domain Arcana":{
+        "Title":"Arcana Domain",
+        "Tier":1,
+        "Archetype":"Adherent",
+        "Description" : "Adherents also have specific spells granted to them by their divinity. Every divinity has one or more domains that they have dominion over. Adherents channel their power through one of their divinity's Domains. The Adherent always has the Domain spell prepared and they don't count against the Adherent's list of prepared spells."
+    },
+    "Domain Life":{
+        "Title":"Life Domain",
+        "Tier":1,
+        "Archetype":"Adherent",
+        "Description" : "Adherents also have specific spells granted to them by their divinity. Every divinity has one or more domains that they have dominion over. Adherents channel their power through one of their divinity's Domains. The Adherent always has the Domain spell prepared and they don't count against the Adherent's list of prepared spells."
+    },
+    "Domain Order":{
+        "Title":"Order Domain",
+        "Tier":1,
+        "Archetype":"Adherent",
+        "Description" : "Adherents also have specific spells granted to them by their divinity. Every divinity has one or more domains that they have dominion over. Adherents channel their power through one of their divinity's Domains. The Adherent always has the Domain spell prepared and they don't count against the Adherent's list of prepared spells."
+    },
+    "Domain Sun":{
+        "Title":"Sun Domain",
+        "Tier":1,
+        "Archetype":"Adherent",
+        "Description" : "Adherents also have specific spells granted to them by their divinity. Every divinity has one or more domains that they have dominion over. Adherents channel their power through one of their divinity's Domains. The Adherent always has the Domain spell prepared and they don't count against the Adherent's list of prepared spells."
+    },
+    "Domain Tempest":{
+        "Title":"Tempest Domain",
+        "Tier":1,
+        "Archetype":"Adherent",
+        "Description" : "Adherents also have specific spells granted to them by their divinity. Every divinity has one or more domains that they have dominion over. Adherents channel their power through one of their divinity's Domains. The Adherent always has the Domain spell prepared and they don't count against the Adherent's list of prepared spells."
+    },
+    "Domain War":{
+        "Title":"War Domain",
+        "Tier":1,
+        "Archetype":"Adherent",
+        "Description" : "Adherents also have specific spells granted to them by their divinity. Every divinity has one or more domains that they have dominion over. Adherents channel their power through one of their divinity's Domains. The Adherent always has the Domain spell prepared and they don't count against the Adherent's list of prepared spells."
+    },
+    "Rage":{
+        "Title":"Rage",
+        "Tier":1,
+        "Archetype":"Berserker",
+        "Description" : "Berserkers have a base Burn of 6 and can fly into a rage with Interaction by making Fortitude+Focus against their current Burn. If they took damage last round they have an Edge on the roll. When they rage, increase their Burn by one. While in a Rage the Berserker adds their Fortitude to damage, has Damage Resistance, and does not go Unconscious when reduced to 0 HP but are Dying. The Rage lasts until they do not roll against an enemy by the end of their turn or they decide to end it.",
+        "Interaction" : {
+"           Description" : "While in a Rage the Berserker adds their Fortitude to damage, has Damage Resistance, and does not go Unconscious when reduced to 0 HP but are Dying. ",
+			"Roll" : [
+    			"Fortitude",
+				"Focus"
+			],
+			"Vs" : "Burn",
+            "Modifier" : {
+                "Damage" : {
+                    "Adds" : "Fortitude"
+                }
+            }
+        }
+    },
+    "Fearsome":{
+        "Title":"Fearsome",
+        "Tier":1,
+        "Archetype":"Berserker",
+        "Description" : "With a Maneuver the Berserker can intimidate someone within a 6 space Range with a Fortitude+Social roll verses the target's Mind defense to make them Frightened until the end of their next turn.",
+        "Maneuver" : {
+            "Description" : "Frighten target until the end of their next round",
+            "Roll" : [
+                "Fortitude",
+                "Social",
+                "Intimidation"
+            ],
+            "Vs" : "Mind",
+            "Target" : "Creature",
+            "Range" : "6",
+            "Effect" : {
+                "Condition" : ["Frightened"]
+            }
+        }
+    },
+    "Channel Oath":{
+        "Title":"Channel Oath",
+        "Tier":1,
+        "Archetype":"Dedicant",
+        "Description" : "Dedicant channel the power of their oath to shape the world. Their Spellcasting Bonus is Will+Focus, they can use their weapon as a Foci (or a holy symbol if their oath is religious), and do not need a free hand to cast spells. They know as many Tier 1 spells as their Will+Focus to a minimum of one. Their Fervor resets to 0 that resets after a Short Rest. To cast a spell they need to spend the spell's Tier times 2 worth of Fervor.",
+        "Enigmas" : {
+            "Spellcasting Bonus" : ["Will", "Focus"],
+            "Prepare" : ["Will","Focus"],
+            "Max Tier" : 1,
+            "Fervor" : 0
+        }
+    },
+    "Rebuke":{
+        "Title":"Rebuke",
+        "Tier":1,
+        "Archetype":"Dedicant",
+        "Description" : "As a Response make a Weapon attack against a foe that attacks an ally that Exposes the target.",
+        "Response" : {
+            "Description" : "Make a Weapon attack against a foe that attacks and ally. Expose the target",
+            "Roll" : [
+                "{{Weapon}}"
+            ],
+            "Vs" : " {{Weapon}}",
+            "Target" : "Creature",
+            "Range" : "{{Weapon}}",
+            "Effect" : {
+                "Damage" : ["{{Weapon}}"],
+                "Exposes" : true
+            }
+        }
+    },
+    "Rising Fervor":{
+        "Title":"Rising Fervor",
+        "Tier":1,
+        "Archetype":"Dedicant",
+        "Description" : "The Dedicant gains Fervor each time the Dedicant Exploits a foe",
+        "Action" : {
+            "Exploit" : true,
+            "Roll" : [
+                "{{Weapon}}"
+            ],
+            "Vs" : " {{Weapon}}",
+            "Target" : "Creature",
+            "Range" : "{{Weapon}}",
+            "Effect" : {
+                "Damage" : ["{{Weapon}}"]
+            },
+            "Fervor" : 1
+        }
+    },
+    "Smite":{
+        "Title":"Smite",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    },
+    "":{
+        "Title":"",
+        "Tier":1,
+        "Archetype":"",
+        "Description" : ""
+    }
+}

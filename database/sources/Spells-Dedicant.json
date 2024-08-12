@@ -1,0 +1,13 @@
+{
+    "Tier 1":{
+        "Bolster" : "Grant the target 1d10+Spellcasting Bonus Temporary HP. Ends the Bleeding condition. When cast at a higher Tier, add an additional 1d8 for every Tier beyond 1st.",
+        "Bond of Ward" : "Target creature gains Edge on defenses and Damage Resistance. The caster can cast spells with the Self or Touch target on the Target creature regardless of how far apart they are. When the target loses HP the caster loses the same amount of HP. When cast at a higher Tier, add an additional creature for every Tier it is cast at beyond 1st.",
+        "Command" : "The caster can speak a two word command to the target becomes Charmed and must attempt it. They cannot attempt to kill themselves.",
+        "Cure Wounds" : "Heal the 1d8+Spellcasting Bonus worth of HP. When cast at a higher Tier, add an additional 1d8 for every Tier beyond 1st.",
+        "Dawning Light" : "The caster glows with true daylight. Allies have an Edge on all rolls against undead or Daylight sensitive creatures. Dispels magical Darkness if affecting target area.",
+        "Divine Investure" : "The caster's weapon bursts with divine energy and deals an additional 1d8 damage. The caster can make a Wits+Weapons roll against a target's React defense within 12 spaces dealing 1d8 damage a target. When cast at a higher Tier, add an additional 1d8 for every Tier beyond 1st.",
+        "Enhance": "Target has Edge on rolls with one Stat chosen when the spell is cast. When cast at a higher Tier, add an additional creature for every Tier beyond 1st.",
+        "Shield of Faith" : "Target has an Edge on their defenses.",
+        "Thunderblast" : "Targets take 1d10 damage, are pushed 3 spaces. If the Spellcasting Roll fails to overcome the defense of the targets, the targets only take half damage. As a Perk targets are knocked Prone Add an additional die for each tier beyond 1st it is cast at."
+    }
+}

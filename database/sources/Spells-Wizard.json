@@ -1,0 +1,42 @@
+{
+    "Cantrips":{
+        "Arcane Bolt":"The target takes 1d8 damage and Pushes the target 1 square. As a Perk Push the target 1 additional space and deal 1d8 damage. Increase the die and spaces pushed by 1 for every Tier the caster is beyond 1st.",
+        "Bonfire":"Creatures within the bonfire or that move through it that fail their React take 1d6 damage. As a Perk they gain the Burning condition. As a Maneuver the caster can move the bonfire 6 spaces. Increase the die for every Tier the caster is beyond 1st.",
+        "Corpse Grasp":"Deal 1d10 damage to the target. As a Perk the target is Blighted. Increase the die for every Tier the caster is beyond 1st.",
+        "Dancing Light":"Summon a torch sized light within Range that hover in the air for the duration. The caster can move the light up to 12 spaces within the Range as a Maneuver. Conjure an additional light by one for every Tier the caster is beyond 1st.",
+        "Mage Hand":"Manifests a translucent hand can lift or manipulate an item less than 5lbs or deal 1d4 damage to a target. The weight it can manipulate increases by 5lbs and the damage it does increases by 1d4 for every Tier the caster is beyond 1st.",
+        "Message":"Inaudibly send a short message to a creature within Range. The targets can reply to the caster with an inaudible short message of their own. The targets increase by one for every Tier the caster is beyond 1st.",
+        "Mold Earth":"Move an area of earth that fits within the target area, excavating, building up, and shaping it. It does not move fast enough to bury someone or cause fall damage if excavated below a creature. As a Perk a creature in the target area is Exposed The area targeted increases by another 1 space Cube for every Tier the caster is beyond 1st.",
+        "Prestidigitation":"The caster can dry, moisten, clean, snuff candles, light candles, or create a strong breeze in the area. The Cube area increases by 1 for every Tier the caster is beyond 1st."
+    },
+    "Tier 1":{
+        "Arcane Armor":"The caster's Deflect becomes 4 and add +2 to the caster's Soak. This armor does not impose Hindrance on Enigma rolls. When cast at a higher Tier, add a +1 to Deflect and +1 to Soak for every Tier it is cast at beyond 1st.",
+        "Arcane Orb" : "Deal 2d10 to the target. When cast at a higher Tier, add an additional 2d10 for every Tier beyond 1st.",
+        "Arcane Shield" : "Gain an Edge on Deflect and React defenses.",
+        "Blur" : "Gain an Edge on Deflect rolls. When cast at a higher Tier, add an additional target for every Tier beyond 1st.",
+        "Charming" : "Gain an Edge on all Social rolls. On a successful roll the target is Charmed by the caster.",
+        "Change Size" : "Target is made small or large sized, their gear changes size along with them. When cast at a higher Tier, target an additional creature for every Tier beyond 1st.",
+        "Comprehend Languages":"Understand any language the caster hear or read. The caster cannot speak the language or write it.",
+        "Farspeech" : "The caster can send a short message 25 words long to a target on the same plane. The target can respond with a 25 word message of their own. When cast at a higher Tier, add 10 words to the message for every Tier beyond 1st.",
+        "Fireburst" : "Deal 3d6 damage to creatures within the target area. As a Perk targets gain the Burning condition. When cast at a higher Tier, add an additional 2d6 for every Tier beyond 1st.",
+        "Featherfall" : "Target takes no fall damage. When cast at a higher Tier, the spell can target an additional creature for every Tier beyond 1st.",
+        "Flare" : "Target is Blinded for 1d6 rounds. When cast at a higher Tier, add an additional target for every Tier beyond 1st.",
+        "Grease" : "Targets within the area are covered in grease, those that fail their defense fall prone. The area becomes Difficult Terrain. The grease is flammable, deals 1d6 damage to all creatures within area and ends the spell. When cast at a higher Tier, the damage from igniting the grease increases by 1d6 for every Tier beyond 1st.",
+        "Gust of Wind" : "Targets that fail their defense are knocked prone. Gasses, mists, and toxic air is dispersed or pushed.",
+        "Leap" : "As a Maneuver Target can leap their movement speed in any direction. It has to be taken in one movement. When cast at a higher Tier, add two additional creatures for every Tier beyond 1st.",
+        "Levitate" : "The caster gains a Hover speed equal to their movement speed. When cast at a higher Tier, target an additional creature for each Tier beyond 1st.",
+        "Lightning Bolt" : "Deal 2d6 damage to creatures within target area. When cast at a higher Tier, add an additional 2d6 for each Tier beyond 1st.",
+        "Locate Object" : "Learn the direction to an object, the distance to an object, and a snapshot of the area around the object from its perspective. If the caster has had the object in their possession, it is a Simple roll, if they have seen the object it is an Easy roll, if they have seen a drawing it is a Hard roll, and if they have only heard a description it is a Desperate roll. When cast at a higher Tier, multiply the Target by 10 for each Tier beyond 1st.",
+        "Mage Grounding" : "Target takes 2d8 damage. During each of the caster turns they can continue the spell with a Maneuver. Subsequent rounds automatically hit. On the target's next round they have a Hindrance on all rolls. If the target leaves the range or gains Full Cover the spell ends. When cast at a higher Tier, add an additional 1d8 for each Tier beyond 1st.",
+        "Masqerade":"Change the target's form to appear as a humanoid wearing whatever clothes the caster chooses. If the target is masquerading as another creature they have Edge on rolls against their disguise. When cast at a higher Tier, an additional two creatures can be transformed for each Tier beyond 1st.",
+        "Scintilating Lights":"Deal 1d6 damage to each creature in range and they are blinded for 1d6 rounds. When cast at a higher Tier, add an additional 1d6 for every Tier beyond 1st",
+        "Shape Flesh" : "Change the caster's form to give them one new capability. They can adapt to an aquatic environment with a 6 space Swim speed, grow functional wings with a 6 space Fly speed, grow armor plates that increase their Soak by 2, or gain a natural weapon that deals 1d6 damage per character Tier. When cast at a higher Tier, the caster can add an additional capability for every Tier beyond 1st.",
+        "Silence" : "No silence is heard within the area nor do any leave the area. When cast at a higher Tier, increase the radius of the Sphere by 1 space for every Tier beyond 1st.",
+        "Snuff Light": "The area is plunged into magical darkness blocking all light sources within it, including those from magical sources.",
+        "Teleportation Anchor": "Create a unique teleportation circle that makes teleportation to the circle easier. When cast at a higher Tier, increase the radius of the Circle by 1 space for every Tier beyond 1st. If cast as a Ritual the anchor becomes Permanent.",
+        "Thunderblast" : "Targets take 1d10 damage, are pushed 3 spaces. If the Spellcasting Roll fails to overcome the defense of the targets, the targets only take half damage. As a Perk targets are knocked Prone. Add an additional die for each tier beyond 1st it is cast at.",
+        "Unerring Bolt" : "Fire three separate bolts of energy, each deals 1d4 damage as separate attacks and automatically hits. When cast at a higher Tier, add an additional two bolts of energy for each Tier beyond 1st.",
+        "Winters Blast" : "Deal 3d6 to creatures within the target area. When cast at a higher Tier, add an additional 2d6 for each tier beyond 1st at."
+    }
+
+}

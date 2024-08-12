@@ -1,0 +1,38 @@
+{
+    "Cantrips" : {
+        "Bonfire" : "Creatures within the bonfire or that move through it that fail their React take 1d6 damage. As a Perk they gain the Burning condition. As a Maneuver the caster can move the bonfire 6 spaces. Increase the die for every Tier the caster is beyond 1st.",
+        "Conjure FLame" : "A torch sized flame appears in the casters hand that can be used it to light fires. As a Maneuver the caster can fling a flame up to 6 spaces by rolling Spellcasting Roll against the target's Deflect that deals 1d6 damage. As a Perk the target gains the Burning condition. Flinging the flame does not end the spell. Increase the die for every Tier the caster is beyond 1st.",
+        "Mold Earth" : "Move an area of earth that fits within the target area, excavating, building up, and shaping it. It does not move fast enough to bury someone or cause fall damage if excavated below a creature. As a Perk a creature in the target area is Exposed The area targeted increases by another 1 space Cube for every Tier the caster is beyond 1st.",
+        "Primal Strike" : "The target takes 1d8 damage. Increase the die for every Tier the caster is beyond 1st.",
+        "Thunderstripe":"Target takes 1d8 damage and is pushed 1 space. As a Perk the target is Deafened until the end of their next turn. Increase the die and the spaces pushed by 1 for every Tier the caster is beyond 1st.",
+        "Thorn Whip":"Conjure a whip that has a 3 space Reach that deals 1d6 damage. If the attack roll exceeds the target's Body defense, the target is pulled up to 3 spaces closer to the caster. As a Perk the target is Exposed. Increase the die for every Tier the caster is beyond 1st."
+    },
+    "Tier 1" : {
+        "Animal Friendship":"Gain Edge on Will rolls against creatures with a -4 Aptitude bonus. If the caster succeeds on a Will roll the creature is also Charmed by the caster.",
+        "Blur":"Gain an Edge on Deflect rolls. When cast at a higher Tier, add an additional target for every Tier beyond 1st.",
+        "Change Size":"Target is made small or large sized, their gear changes size along with them. When cast at a higher Tier, target an additional creature for every Tier beyond 1st.",
+        "Cure Wounds":"Heal the 1d8+Spellcasting Bonus worth of HP. When cast at a higher Tier, add an additional 1d8 for every Tier beyond 1st.",
+        "Dawning Light":"The caster glows with true daylight. Allies have an Edge on all rolls against undead or Daylight sensitive creatures. Dispels magical Darkness if affecting target area.",
+        "Enhance" : "Target has Edge on rolls with one Stat chosen when the spell is cast. When cast at a higher Tier, add an additional creature for every Tier beyond 1st.",
+        "Entangle" : "On a success the target is Restrained until the spells end. Each round the caster re-rolls the attack against targets' Body. Even if a creature frees themselves or moves into the target area it is Difficult Terrain. If cast as a Ritual the Duration becomes 1 day and doesn't require Concentration.",
+        "Feather Fall":"Target takes no fall damage. When cast at a higher Tier, the spell can target an additional creature for every Tier beyond 1st.",
+        "Flameblade" : "Summon a flaming weapon that deals 2d6 damage and has the Bladed, Finesse, and Simple Tags. Attacks give the Burning condition. It can be used to start fires. When cast at a higher Tier, add an additional 1d6 for every Tier beyond 1st.",
+        "Foxfire":"Targets glow with Low Light, revealing invisible creatures. Rolls against the target's Deflect defense have Edge. When cast at a higher Tier, increase the radius of the Sphere by one space for every Tier beyond 1st.",
+        "Fog":"Creatures within the fog have Cover. When cast at a higher Tier, increase the radius of the Sphere by one space for every Tier beyond 1st.",
+        "Goodberry":"Enchant Will+Enigma berries. Each berry heals 1 HP and provides nourishment for 1 day. The berries rot after 1 hour.",
+        "Gust of Wind" : "Targets that fail their defense are knocked prone. Gasses, mists, and toxic air is dispersed or pushed.",
+        "Heal" : "The target is healed one level of Blighted and one of the following conditions: Blinded, Bleeding, Deafened, Paralyzed, Petrified, Sickened, or Unconscious. When cast at a higher Tier, heal an additional condition for for every Tier beyond 1st.",
+        "Lighting Bolt":"Deal 2d6 damage to creatures within target area. When cast at a higher Tier, add an additional 2d6 for each Tier beyond 1st.",
+        "Masqerade" : "Change the target's form to appear as a humanoid wearing whatever clothes the caster chooses. If the target is masquerading as another creature they have Edge on rolls against their disguise. When cast at a higher Tier, an additional two creatures can be transformed for each Tier beyond 1st.",
+        "Moonbeam" : "A beam shines down dealing 3d6 damage. Half as much on a successful defense. When cast at a higher Tier, add an additional 2d6 for each tier beyond 1st.",
+        "Shape Flesh" : "Change the caster's form to give them one new capability. They can adapt to an aquatic environment with a 6 space Swim speed, grow functional wings with a 6 space Fly speed, grow armor plates that increase their Soak by 2, or gain a natural weapon that deals 1d6 damage per character Tier. When cast at a higher Tier, the caster can add an additional capability for every Tier beyond 1st.",
+        "Silence" : "No silence is heard within the area nor do any leave the area. When cast at a higher Tier, increase the radius of the Sphere by 1 space for every Tier beyond 1st.",
+        "Snuff Light": "The area is plunged into magical darkness blocking all light sources within it, including those from magical sources.",
+        "Speak with Animals":"Speak with animals as if they have an Aptitude of - 1 and are Charmed by the caster. If the spell is cast as a Ritual the duration becomes 1 hour.",
+        "Spike Fields":"Area becomes Hazardous Terrain that deals 1d6 damage. When cast at a higher Tier, add an additional die for each tier beyond 1st.",
+        "Thunderblast":"Targets take 1d10 damage, are pushed 3 spaces. If the Spellcasting Roll fails to overcome the defense of the targets, the targets only take half damage. As a Perk targets are knocked Prone. Add an additional die for each tier beyond 1st it is cast at.",
+        "Tremor":"Targets fall prone and take 1d6 damage. When cast at a higher Tier, add an additional 1d6 for each tier beyond 1st.",
+        "Winter's Blast":"Deal 3d6 to creatures within the target area. When cast at a higher Tier, add an additional 2d6 for each tier beyond 1st at."
+        
+    }
+}
