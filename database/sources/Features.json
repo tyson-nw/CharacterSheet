@@ -242,7 +242,7 @@
             "Target" : "Creature",
             "Range" : "{{Weapon}}",
             "Effect" : {
-                "Damage" : ["{{Weapon}}", "2D6"]
+                "Damage" : ["{{Weapon}}"]
             }
         }
     },
@@ -337,5 +337,126 @@
         "Archetype":"Wizard",
         "Description" : "The Wizard records all the spells they know in their Spellbook. They start with two Cantrips and as many Tier 1 spells as their Aptitude+Arcana. They can scribe a new spell from a scroll or other Spellbook into their Spellbook with an Aptitude+Enigma roll. Scribing takes one hour per Spell Tier. The spell takes up two pages per Spell Tier of the spell in the Spellbook. If the Roll fails, the pages the spell would have taken up are ruined. When copying from a Spellbook the character wrote the spell in, they have an Edge to copy it.",
         "Pages" : 100
+    },
+    "Dwarf-Low Light Vision" : {
+        "Title": "Low Light Vision",
+        "Ancestry" : "Dwarf",
+        "Description" : "Dwarves can see in Low Light as if it were Bright Light.",
+        "Vision": "Low Light Vision"
+    },
+    "Dwarf-Stout Physique" : {
+        "Title": "Stout Physique",
+        "Ancestry" : "Dwarf",
+        "Description" : "Dwarves have Edge on Body Rolls.",
+        "Bonus" : {
+            "Body": "Edge"
+        }
+    },
+    "Elf-Low Light Vision" : {
+        "Title": "Low Light Vision",
+        "Ancestry" : "Elf",
+        "Description" : "Elves can see in Low Light as if it were Bright Light.",
+        "Vision": "Low Light Vision"
+    },
+    "Elf-Keen Senses" : {
+        "Title": "Keen Senses",
+        "Ancestry" : "Elf",
+        "Description" : "A D4 is added to Senses Rolls.",
+        "Bonus" : {
+            "Senses" : "D4"
+        }
+    },
+    "Gnome-Mechanical Mind" : {
+        "Title": "Mechanical Mind",
+        "Ancestry" : "Gnome",
+        "Description" : "Gnomes have Edge on Mind Rolls.",
+        "Bonus" : {
+            "Mind": "Edge"
+        }
+    },
+    "Gnome-Low Light Vision" : {
+        "Title": "Low Light Vision",
+        "Ancestry" : "Gnome",
+        "Description" : "Gnomes can see in Low Light as if it were Bright Light.",
+        "Vision": "Low Light Vision"
+    },
+    "Gnome-Small Stature" : {
+        "Title": "Small Stature",
+        "Ancestry" : "Gnome",
+        "Description" : "Small creatures can Stride 5 spaces. Small creatures gain Full Cover when standing behind a Medium sized or larger creature.",
+        "Stride"  : 5
+    },
+    "Halfun-Luck" : {
+        "Title": "Luck",
+        "Ancestry" : "Halfun",
+        "Description" : "As a Response a Halfun can add an additional D4 to any Roll",
+        "Reaction":{
+            "Bonus" : {
+                "Roll" : "D4"
+            }
+        }
+    },
+    "Halfun-Vanish" : {
+        "Title": "Vanish",
+        "Ancestry" : "Halfun",
+        "Description" : "Halfuns add a D4 to their Stealth Rolls.",
+        "Bonus" : {
+            "Stealth" : "D4"
+        }
+    },
+    "Halfun-Small Stature" : {
+        "Title": "Small Stature",
+        "Ancestry" : "Halfun",
+        "Description" : "Small creatures can Stride 5 spaces. Small creatures gain Full Cover when standing behind a Medium sized or larger creature.",
+        "Stride"  : 5
+    },
+    "Human-Coordinated" : {
+        "Title": "Coordinated",
+        "Ancestry" : "Human",
+        "Description" : "Humans can move half their Speed when performing a Maneuver that doesn't include movement.",
+        "Bonus" : {
+            "Manuvers" : {
+                "Stride" : 3
+            }
+        }
+    },
+    "Human-Recuperative" : {
+        "Title": "Recuperative",
+        "Ancestry" : "Human",
+        "Description" : "When recovering HP, humans recover an additional 1d4 HP.",
+        "Bonus" : {
+            "Healing" : "D4"
+        }
+    },
+    "Orc-Relentless" : {
+        "Title": "Relentless",
+        "Ancestry" : "Orc",
+        "Description" : "When reduced to 0 HP an orc is reduced to 1 HP instead. This ability can be used once per Long Rest."
+    },
+    "Orc-Overwhelming Blows" : {
+        "Title": "Overwhelming Blows",
+        "Ancestry" : "Orc",
+        "Description" : "As a Weapons roll Perk, add their Body to damage.",
+        "Perk" : {
+            "Trigger" : "Weapon",
+            "Effect" : {
+                "Damage" : ["{{Weapon}}", "Body"]
+            }
+        }
+    },
+    "" : {
+        "Title": "",
+        "Ancestry" : "",
+        "Description" : ""
+    },
+    "" : {
+        "Title": "",
+        "Ancestry" : "",
+        "Description" : ""
+    },
+    "" : {
+        "Title": "",
+        "Ancestry" : "",
+        "Description" : ""
     }
 }
