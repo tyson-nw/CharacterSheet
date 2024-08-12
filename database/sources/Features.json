@@ -141,115 +141,201 @@
     "Smite":{
         "Title":"Smite",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Dedicant",
+        "Description" : "As an Interaction, the Dedicant can spend 1 Fervor to do an additional 1d8 damage on the previous weapon attack.",
+        "Interaction" : {
+            "Damage" : "D8",
+            "Fervor" : -1
+        }
     },
-    "":{
-        "Title":"",
+    "Slippery":{
+        "Title":"Slippery",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Rogue",
+        "Description" : "As a Maneuver a Rogue can Evade and move their Stride speed.",
+        "Maneuver" : {
+            "Movement" : "{{Stride}}",
+            "Action" : "Evade"
+        }
     },
-    "":{
-        "Title":"",
+    "Stealthy":{
+        "Title":"Stealthy",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Rogue",
+        "Description" : "As a Maneuver a Rogue can Hide and move their Stride speed.",
+        "Maneuver" : {
+            "Movement" : "{{Stride}}",
+            "Action" : "Hide"
+        }
     },
-    "":{
-        "Title":"",
+    "Sneak Attack":{
+        "Title":"Sneak Attack 2d6",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Rogue",
+        "Description" : "As an Action, Exploit a foe by making a Weapons Roll to deal weapon damage and an additional 2d6. ",
+        "Action" : {
+            "Exploit" : true,
+            "Roll" : [
+                "{{Weapon}}"
+            ],
+            "Target" : "Creature",
+            "Range" : "{{Weapon}}",
+            "Effect" : {
+                "Damage" : ["{{Weapon}}", "2D6"]
+            }
+        }
     },
-    "":{
-        "Title":"",
+    "Foebinding":{
+        "Title":"Foebinding",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Scout",
+        "Description":"As an Maneuver a Scout can designate a foe. As long as they make no attacks against other foes or make responses to other foes, the next round they have an additional 1d4 on Weapons and Senses rolls against that foe.",
+        "Maneuver" : {
+            "Target" : "Creature",
+            "Range" : "{{Visible}}",
+            "Effect" : {
+                "Flag" : true,
+                "Damage Bonus" : "1D4"
+            }
+        }
     },
-    "":{
-        "Title":"",
+    "Wildswalker":{
+        "Title":"Wildswalker",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Scout",
+        "Description":"A Scout can move through Difficult Terrain and Hazardous Terrain without a penalty to their speed and can move at full speed while hidden."
     },
-    "":{
-        "Title":"",
+    "Wildcrafting":{
+        "Title":"Wildcrafting",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Scout",
+        "Description" : "A Scout has Expertise in tracking, hunting, navigating, and wilderness survival.",
+        "Expertise" : "Wildcrafting"
     },
-    "":{
-        "Title":"",
+    "Battle Recovery":{
+        "Title":"Battle Recovery",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Warrior",
+        "Description" : "When taking a Short or Long Rest, Warriors gain 1d8 plus their Fortitude worth of Temporary HP.",
+        "Effect" : {
+            "Temporary HP" : [
+                "1D8",
+                "Fortitude"
+            ]
+        },
+        "Rest" : [
+            "Short",
+            "Long"
+        ]
     },
-    "":{
-        "Title":"",
+    "Combat Maneuver":{
+        "Title":"Combat Maneuver",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Warrior",
+        "Description" : "As an Action a Warrior can make a Weapons Roll on an Exposed foe. The warrior has an Edge on that attack.",
+        "Action" : {
+            "Exploit" : true,
+            "Edge" : true,
+            "Roll" : [
+                "{{Weapon}}"
+            ],
+            "Target" : "Creature",
+            "Range" : "{{Weapon}}",
+            "Effect" : {
+                "Damage" : ["{{Weapon}}", "2D6"]
+            }
+        }
     },
-    "":{
-        "Title":"",
+    "Martial Training":{
+        "Title":"Martial Training",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Warrior",
+        "Description" : "As a Perk for all weapons the Warrior can deal max damage.",
+        "Perk" : {
+            "Trigger" : "Weapon",
+            "Effect" : {
+                "Damage" : ["{{WeaponMax}}"]
+            }
+        }
     },
-    "":{
-        "Title":"",
+    "Primal Channel":{
+        "Title":"Primal Channel",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Wildshaper",
+        "Description" : "Spells are revealed to Wildshapers through their connection with the primal forces of nature. Their Spellcasting Bonus is Will+Knowledge and use a Wildshaper Foci or Apothecary Pouch as a Foci. They know as many Tier 1 spells as their Wits+Knowledge and two Cantrips. During a Long Rest they can commune with nature and change the spells they know. They have a starting Burn of 6 that resets after a Long Rest.",
+        "Enigma" : {
+            "Spellcasting Bonus" : ["Will","Primal Enigmas"],
+            "Prepare" : ["Wits", "Knowledge"],
+            "To Prepare" : "Downtime",
+            "Known" : ["Wits", "Knowledge"],
+            "Cantrips" : 2,
+            "Max Tier" : 1,
+            "Base Burn" : 6
+        }
     },
-    "":{
-        "Title":"",
+    "Wildshape":{
+        "Title":"Wildshape",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Wildshaper",
+        "Description": "As a Maneuver a Wildshaper can roll against their Burn to polymorph into one of two Beasts of Challenge 2 or lower that the Wildeshaper knows. Communing with nature as a Downtime action they can change what beasts they can polymorph into. They gain the beast's HP inTemporary HP along with its Strength, Fortitude, and Dexterity bonuses. Their Defenses, Deflect and Soak are derived from these new bonuses. When the Wild Shaped Wildshaper's  Temporary HP is reduced to 0 they revert to their natural form and take any additional damage left over from the attack. Wildshaping increases their Burn by 2. The Wildshaper has two shapes they can wildshape into.",
+        "Maneuver" : {
+            "Description" : "Change into known form",
+            "Roll" : ["Will","Focus"],
+            "Vs" : "Burn",
+            "Burn" : 2,
+            "Target" : "Self",
+            "Effect" : {
+                "Shapechange" : {
+                    "{{Dropdown}}" : "{{Subfeatures}}"
+                }
+            }
+        },
+        "Subfeatures":[
+            {
+                "Donkey" : {"Adds" : [{"Title": "Donkey", "Add" : "Subfeature-Wildshape-Donkey"}]},
+                "Flicker Hound" : {"Adds" : [{"Title" : "Flicker Hound", "Add" : "Subfeature-Wildshape-Flicker Hound"}]},
+                "Horse" : {"Adds" : [{"Title" : "Horse", "Add" : "Subfeature-Wildshape-Horse"}]},
+                "Hunting Hawk" : {"Adds" : [{"Title" : "Hunting Hawk" , "Add" : "Subfeature-Wildshape-Hunting Hawk"}]},
+                "Mastiff" : {"Adds" : [{"Title" : "Mastiff", "Add" : "Subfeature-Wildshape-Mastiff"}]},
+                "Wolf" : {"Adds" : [{"Title" : "Wolf" , "Add" : "Subfeature-Wildshape-Wolf"}]}
+            },
+            {
+                "Donkey" : {"Adds" : [{"Title": "Donkey", "Add" : "Subfeature-Wildshape-Donkey"}]},
+                "Flicker Hound" : {"Adds" : [{"Title" : "Flicker Hound", "Add" : "Subfeature-Wildshape-Flicker Hound"}]},
+                "Horse" : {"Adds" : [{"Title" : "Horse", "Add" : "Subfeature-Wildshape-Horse"}]},
+                "Hunting Hawk" : {"Adds" : [{"Title" : "Hunting Hawk" , "Add" : "Subfeature-Wildshape-Hunting Hawk"}]},
+                "Mastiff" : {"Adds" : [{"Title" : "Mastiff", "Add" : "Subfeature-Wildshape-Mastiff"}]},
+                "Wolf" : {"Adds" : [{"Title" : "Wolf" , "Add" : "Subfeature-Wildshape-Wolf"}]}
+            }
+        ]
     },
-    "":{
-        "Title":"",
+    "Arcane Initiate":{
+        "Title":"Arcane Initiate",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Wizard",
+        "Description" : "Wizards channel the arcane energies that flow through the world. Their Spellcasting Bonus is their Aptitude+Enigmas and they use an Arcane Foci or Spell Component Pouch as their Foci. After each Long Rest they decide what spells to prepare for the following day, up to their Aptitude+Knowledge to a minimum of one and two Cantrips. Wearing armor casting causes Hindrance on Enigma rolls. They have a starting Burn of 6 that resets after a Long Rest.",
+        "Enigmas" : {
+            "Spellcasting Bonus" : ["Aptitude", "Arcane Enigmas"],
+            "Prepare" : ["Aptitude", "Knowledge"],
+            "To Prepare" : "Long",
+            "Known" : "{{Spellbook}}",
+            "Cantrips" : 2,
+            "Max Tier": 1,
+            "Base Burn" : 6
+        }
     },
-    "":{
-        "Title":"",
+    "Ritual Cast":{
+        "Title":"Ritual Cast",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Wizard",
+        "Description" : "The wizard can cast any spell from their spellbook as a Ritual.",
+        "Ritual" : "{{Spellbook}}"
     },
-    "":{
-        "Title":"",
+    "Spellbook":{
+        "Title":"Spellbook",
         "Tier":1,
-        "Archetype":"",
-        "Description" : ""
-    },
-    "":{
-        "Title":"",
-        "Tier":1,
-        "Archetype":"",
-        "Description" : ""
-    },
-    "":{
-        "Title":"",
-        "Tier":1,
-        "Archetype":"",
-        "Description" : ""
-    },
-    "":{
-        "Title":"",
-        "Tier":1,
-        "Archetype":"",
-        "Description" : ""
-    },
-    "":{
-        "Title":"",
-        "Tier":1,
-        "Archetype":"",
-        "Description" : ""
+        "Archetype":"Wizard",
+        "Description" : "The Wizard records all the spells they know in their Spellbook. They start with two Cantrips and as many Tier 1 spells as their Aptitude+Arcana. They can scribe a new spell from a scroll or other Spellbook into their Spellbook with an Aptitude+Enigma roll. Scribing takes one hour per Spell Tier. The spell takes up two pages per Spell Tier of the spell in the Spellbook. If the Roll fails, the pages the spell would have taken up are ruined. When copying from a Spellbook the character wrote the spell in, they have an Edge to copy it.",
+        "Pages" : 100
     }
 }
