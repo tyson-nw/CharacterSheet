@@ -444,19 +444,9 @@
             }
         }
     },
-    "" : {
-        "Title": "",
-        "Ancestry" : "",
-        "Description" : ""
-    },
-    "" : {
-        "Title": "",
-        "Ancestry" : "",
-        "Description" : ""
-    },
-    "" : {
-        "Title": "",
-        "Ancestry" : "",
-        "Description" : ""
+    "One of the Crowd" : {
+        "Title": "One of the Crowd",
+        "Culture" : "Urban",
+        "Description" : "The character can move through occupied spaces without penalty to movements."
     }
 }
