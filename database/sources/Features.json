@@ -53,6 +53,7 @@
         "Title":"Rage",
         "Tier":1,
         "Archetype":"Berserker",
+        "Short Description" : "Adds Fortitude to damage, gain Damage Resistance, and do not go Unconscious when reduced to 0 HP.",
         "Description" : "Berserkers have a base Burn of 6 and can fly into a rage with Interaction by making Fortitude+Focus against their current Burn. If they took damage last round they have an Edge on the roll. When they rage, increase their Burn by one. While in a Rage the Berserker adds their Fortitude to damage, has Damage Resistance, and does not go Unconscious when reduced to 0 HP but are Dying. The Rage lasts until they do not roll against an enemy by the end of their turn or they decide to end it.",
         "Interaction" : {
 "           Description" : "While in a Rage the Berserker adds their Fortitude to damage, has Damage Resistance, and does not go Unconscious when reduced to 0 HP but are Dying. ",
@@ -72,7 +73,8 @@
         "Title":"Fearsome",
         "Tier":1,
         "Archetype":"Berserker",
-        "Description" : "With a Maneuver the Berserker can intimidate someone within a 6 space Range with a Fortitude+Social roll verses the target's Mind defense to make them Frightened until the end of their next turn.",
+        "Short Description" : "Frighten Target in 6 space Range",
+        "Description" : "With a Maneuver the Berserker can intimidate someone within a 6 space Range with a Fortitude+Social roll verses the target's Mind defense to make them Frightened until the end of their next turn.",
         "Maneuver" : {
             "Description" : "Frighten target until the end of their next round",
             "Roll" : [
@@ -104,6 +106,7 @@
         "Title":"Rebuke",
         "Tier":1,
         "Archetype":"Dedicant",
+        "Short Description" : "Expose Target",
         "Description" : "As a Response make a Weapon attack against a foe that attacks an ally that Exposes the target.",
         "Response" : {
             "Description" : "Make a Weapon attack against a foe that attacks and ally. Expose the target",
@@ -123,25 +126,18 @@
         "Title":"Rising Fervor",
         "Tier":1,
         "Archetype":"Dedicant",
+        "Short Description" : "Increase Fervor by 1",
         "Description" : "The Dedicant gains Fervor each time the Dedicant Exploits a foe",
-        "Action" : {
+        "{{Weapon}}" : {
             "Exploit" : true,
-            "Roll" : [
-                "{{Weapon}}"
-            ],
-            "Vs" : " {{Weapon}}",
-            "Target" : "Creature",
-            "Range" : "{{Weapon}}",
-            "Effect" : {
-                "Damage" : ["{{Weapon}}"]
-            },
-            "Fervor" : 1
+            "Fervor" : 1            
         }
     },
     "Smite":{
         "Title":"Smite",
         "Tier":1,
         "Archetype":"Dedicant",
+        "Short Description" : "Add d8 to previous damage dealt.",
         "Description" : "As an Interaction, the Dedicant can spend 1 Fervor to do an additional 1d8 damage on the previous weapon attack.",
         "Interaction" : {
             "Damage" : "D8",
@@ -152,6 +148,7 @@
         "Title":"Slippery",
         "Tier":1,
         "Archetype":"Rogue",
+        "Short Description" : "Evade and move.",
         "Description" : "As a Maneuver a Rogue can Evade and move their Stride speed.",
         "Maneuver" : {
             "Movement" : "{{Stride}}",
@@ -162,6 +159,7 @@
         "Title":"Stealthy",
         "Tier":1,
         "Archetype":"Rogue",
+        "Short Description" : "Hide and move.",
         "Description" : "As a Maneuver a Rogue can Hide and move their Stride speed.",
         "Maneuver" : {
             "Movement" : "{{Stride}}",
@@ -169,26 +167,21 @@
         }
     },
     "Sneak Attack":{
-        "Title":"Sneak Attack 2d6",
+        "Title":"Sneak Attack",
         "Tier":1,
         "Archetype":"Rogue",
+        "Short Description" : "Exploit to deal additional 2D6",
         "Description" : "As an Action, Exploit a foe by making a Weapons Roll to deal weapon damage and an additional 2d6. ",
-        "Action" : {
+        "{{Weapon}}" : {
             "Exploit" : true,
-            "Roll" : [
-                "{{Weapon}}"
-            ],
-            "Target" : "Creature",
-            "Range" : "{{Weapon}}",
-            "Effect" : {
-                "Damage" : ["{{Weapon}}", "2D6"]
-            }
+            "Bonus Damage" : "2D6"
         }
     },
     "Foebinding":{
         "Title":"Foebinding",
         "Tier":1,
         "Archetype":"Scout",
+        "Short Description" : "Designate a foe, +D4 to Rolls agaisnt target.",
         "Description":"As an Maneuver a Scout can designate a foe. As long as they make no attacks against other foes or make responses to other foes, the next round they have an additional 1d4 on Weapons and Senses rolls against that foe.",
         "Maneuver" : {
             "Target" : "Creature",
@@ -203,6 +196,7 @@
         "Title":"Wildswalker",
         "Tier":1,
         "Archetype":"Scout",
+        "Short Description" : "Move while hidden or through Difficult and Hazardous terrain at full speed.",
         "Description":"A Scout can move through Difficult Terrain and Hazardous Terrain without a penalty to their speed and can move at full speed while hidden."
     },
     "Wildcrafting":{
@@ -216,7 +210,7 @@
         "Title":"Battle Recovery",
         "Tier":1,
         "Archetype":"Warrior",
-        "Description" : "When taking a Short or Long Rest, Warriors gain 1d8 plus their Fortitude worth of Temporary HP.",
+        "Description" : "When taking a Short or Long Rest, Warriors gain D8 plus their Fortitude worth of Temporary HP.",
         "Effect" : {
             "Temporary HP" : [
                 "1D8",
@@ -233,17 +227,9 @@
         "Tier":1,
         "Archetype":"Warrior",
         "Description" : "As an Action a Warrior can make a Weapons Roll on an Exposed foe. The warrior has an Edge on that attack.",
-        "Action" : {
+        "{{Weapon}}" : {
             "Exploit" : true,
-            "Edge" : true,
-            "Roll" : [
-                "{{Weapon}}"
-            ],
-            "Target" : "Creature",
-            "Range" : "{{Weapon}}",
-            "Effect" : {
-                "Damage" : ["{{Weapon}}"]
-            }
+            "Edge" : true
         }
     },
     "Martial Training":{
@@ -277,6 +263,7 @@
         "Title":"Wildshape",
         "Tier":1,
         "Archetype":"Wildshaper",
+        "Short Description" : "Wildshape into {{subfeatures}}",
         "Description": "As a Maneuver a Wildshaper can roll against their Burn to polymorph into one of two Beasts of Challenge 2 or lower that the Wildeshaper knows. Communing with nature as a Downtime action they can change what beasts they can polymorph into. They gain the beast's HP inTemporary HP along with its Strength, Fortitude, and Dexterity bonuses. Their Defenses, Deflect and Soak are derived from these new bonuses. When the Wild Shaped Wildshaper's  Temporary HP is reduced to 0 they revert to their natural form and take any additional damage left over from the attack. Wildshaping increases their Burn by 2. The Wildshaper has two shapes they can wildshape into.",
         "Maneuver" : {
             "Description" : "Change into known form",
@@ -328,6 +315,7 @@
         "Title":"Ritual Cast",
         "Tier":1,
         "Archetype":"Wizard",
+        "Short Description" : "Cast spell from spellbook as Ritual.",
         "Description" : "The wizard can cast any spell from their spellbook as a Ritual.",
         "Ritual" : "{{Spellbook}}"
     },
@@ -338,53 +326,60 @@
         "Description" : "The Wizard records all the spells they know in their Spellbook. They start with two Cantrips and as many Tier 1 spells as their Aptitude+Arcana. They can scribe a new spell from a scroll or other Spellbook into their Spellbook with an Aptitude+Enigma roll. Scribing takes one hour per Spell Tier. The spell takes up two pages per Spell Tier of the spell in the Spellbook. If the Roll fails, the pages the spell would have taken up are ruined. When copying from a Spellbook the character wrote the spell in, they have an Edge to copy it.",
         "Pages" : 100
     },
-    "Dwarf-Low Light Vision" : {
+    "Dwarf-LowLightVision" : {
         "Title": "Low Light Vision",
         "Ancestry" : "Dwarf",
+        "Short Description" : "See in Low Light",
         "Description" : "Dwarves can see in Low Light as if it were Bright Light.",
         "Vision": "Low Light Vision"
     },
-    "Dwarf-Stout Physique" : {
+    "Dwarf-StoutPhysique" : {
         "Title": "Stout Physique",
         "Ancestry" : "Dwarf",
+        "Short Description" : "Edge on Body Rolls.",
         "Description" : "Dwarves have Edge on Body Rolls.",
         "Bonus" : {
             "Body": "Edge"
         }
     },
-    "Elf-Low Light Vision" : {
+    "Elf-LowLightVision" : {
         "Title": "Low Light Vision",
         "Ancestry" : "Elf",
+        "Short Description" : "See in Low Light",
         "Description" : "Elves can see in Low Light as if it were Bright Light.",
         "Vision": "Low Light Vision"
     },
-    "Elf-Keen Senses" : {
+    "Elf-KeenSenses" : {
         "Title": "Keen Senses",
         "Ancestry" : "Elf",
+        "Short Description" : "+D4 to Senses Rolls.",
         "Description" : "A D4 is added to Senses Rolls.",
         "Bonus" : {
             "Senses" : "D4"
         }
     },
-    "Gnome-Mechanical Mind" : {
+    "Gnome-MechanicalMind" : {
         "Title": "Mechanical Mind",
         "Ancestry" : "Gnome",
+        "Short Description" : "Edge on Mind Rolls.",
         "Description" : "Gnomes have Edge on Mind Rolls.",
         "Bonus" : {
             "Mind": "Edge"
         }
     },
-    "Gnome-Low Light Vision" : {
+    "Gnome-LowLightVision" : {
         "Title": "Low Light Vision",
         "Ancestry" : "Gnome",
+        "Short Description" : "See in Low Light",
         "Description" : "Gnomes can see in Low Light as if it were Bright Light.",
         "Vision": "Low Light Vision"
     },
-    "Gnome-Small Stature" : {
+    "Gnome-SmallStature" : {
         "Title": "Small Stature",
         "Ancestry" : "Gnome",
+        "Short Description" : "Gain Cover behind Medium or larger creature.",
         "Description" : "Small creatures can Stride 5 spaces. Small creatures gain Full Cover when standing behind a Medium sized or larger creature.",
-        "Stride"  : 5
+        "Stride"  : "Move 6 spaces."
     },
     "Halfun-Luck" : {
         "Title": "Luck",
@@ -399,20 +394,23 @@
     "Halfun-Vanish" : {
         "Title": "Vanish",
         "Ancestry" : "Halfun",
+        "Short Description" : "Add a D4 to their Stealth Rolls.",
         "Description" : "Halfuns add a D4 to their Stealth Rolls.",
         "Bonus" : {
             "Stealth" : "D4"
         }
     },
-    "Halfun-Small Stature" : {
+    "Halfun-SmallStature" : {
         "Title": "Small Stature",
         "Ancestry" : "Halfun",
+        "Short Description" : "Gain Cover behind Medium or larger creature.",
         "Description" : "Small creatures can Stride 5 spaces. Small creatures gain Full Cover when standing behind a Medium sized or larger creature.",
-        "Stride"  : 5
+        "Stride"  : "Move 6 spaces."
     },
     "Human-Coordinated" : {
         "Title": "Coordinated",
         "Ancestry" : "Human",
+        "Short Description" : "Move 3 spaces.",
         "Description" : "Humans can move half their Speed when performing a Maneuver that doesn't include movement.",
         "Bonus" : {
             "Manuvers" : {
@@ -423,7 +421,8 @@
     "Human-Recuperative" : {
         "Title": "Recuperative",
         "Ancestry" : "Human",
-        "Description" : "When recovering HP, humans recover an additional 1d4 HP.",
+        "Short Description" : "Heal additional D4 HP.",
+        "Description" : "When recovering HP, humans recover an additional D4 HP.",
         "Bonus" : {
             "Healing" : "D4"
         }
@@ -431,9 +430,10 @@
     "Orc-Relentless" : {
         "Title": "Relentless",
         "Ancestry" : "Orc",
+        "Short Description" : "When reduced to 0 HP an orc is reduced to 1 HP instead.",
         "Description" : "When reduced to 0 HP an orc is reduced to 1 HP instead. This ability can be used once per Long Rest."
     },
-    "Orc-Overwhelming Blows" : {
+    "Orc-OverwhelmingBlows" : {
         "Title": "Overwhelming Blows",
         "Ancestry" : "Orc",
         "Description" : "As a Weapons roll Perk, add their Body to damage.",
@@ -447,6 +447,7 @@
     "One of the Crowd" : {
         "Title": "One of the Crowd",
         "Culture" : "Urban",
+        "Short Description" : "Move through occupied spaces without penalty.",
         "Description" : "The character can move through occupied spaces without penalty to movements."
     }
 }

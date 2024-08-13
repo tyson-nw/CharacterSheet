@@ -1,0 +1,34 @@
+{
+    "Bladed" : {
+        "Description" : "Target gains Bleeding",
+        "Perk" : ["Bleeding"]
+    },
+    "Blunt" : {
+        "Description" : "Wielder chooses which of the target's stats to Blight",
+        "Perk" :  ["Blight"]
+    },
+    "Charging" : {
+        "Description" : "The attack knocks the target Prone",
+        "Perk" : ["Prone"]
+    },
+    "Disarming" : {
+        "Description" : "Target is Exposed.",
+        "Perk" : ["Exposed"]
+    },
+    "Heavy" : {
+        "Description" : "The attack deals maximum damage for the weapon.",
+        "Perk" : ["MaximumDamage"]
+    },
+    "Piercing" : {
+        "Description" : "Bypass target's Soak.",
+        "Perk" : ["Bypass Soak"]
+    },
+    "Shield" : {
+        "Description" : "As a Deflect Perk the wielder can Push attacker back 2 spaces.",
+        "Perk" : ["Push 2"]
+    },
+    "Slam" : {
+        "Description" : "Push the target up to 2 spaces and Expose them",
+        "Perk" : ["Push 2", "Expose"]
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "Leather":{
+        "Deflection Bonus": 0,
+        "Soak": 1,
+        "Tags": ["Light Armor"]
+    },
+    "Brigantine":{
+        "Deflection Bonus": 1,
+        "Soak": 2,
+        "Tags": ["Light Armor"]
+    },
+    "Chainmail":{
+        "Deflection Bonus": 2,
+        "Soak": 2,
+        "Tags": ["Medium Armor", "Noisy"]
+    },
+    "Scale mail":{
+        "Deflection Bonus": 2,
+        "Soak": 3,
+        "Tags": ["Medium Armor", "Noisy"]
+    },
+    "Breatplate":{
+        "Deflect": 4,
+        "Soak": 4,
+        "Tags": ["Medium Armor"]
+    },
+    "Plate":{
+        "Deflect": 5,
+        "Soak": 4,
+        "Tags": ["Heavy Armor", "Noisy"]
+    },
+    "Shield":{
+        "Deflection Bonus": 1,
+        "Soak": 0,
+        "Tags": ["Shield", "Slam"]
+    }
+}

@@ -1,0 +1,134 @@
+{
+    "Club":{
+        "Damage" : "D6",
+        "Tags" : ["Basic", "Blunt", "Versatile D8"]
+    },
+    "Crossbow":{
+        "Damage" : "D10",
+        "Tags":["Ammunition", "Martial", "Mechanical", "Piercing", "Ranged 24 spaces"]
+    },
+    "Dagger":{
+        "Damage":"D4",
+        "Tags":["Basic", "Fine", "Finesse", "Piercing", "Thrown 4 spaces"]
+    },
+    "Dart":{
+        "Damage":"D4",
+        "Tags":["Basic", "Finesse", "Piercing", "Thrown 4 spaces"]
+    },
+    "Battleaxe":{
+        "Damage":"D8",
+        "Tags":["Bladed", "Martial", "Versatile D10"]
+    },
+    "Flail":{
+        "Damage":"D8",
+        "Tags":["Blunt", "Martial", "Disarming"]
+    },
+    "Greatclub":{
+        "Damage":"D10",
+        "Tags":["Basic", "Blunt", "Heavy", "Slam"]
+    },
+    "Glaive":{
+        "Damage":"D8",
+        "Tags":["Bladed", "Finesse", "Martial", "Reach", "Two-Handed"]
+    },
+    "Greataxe":{
+        "Damage":"D8",
+        "Tags":["Bladed", "Heavy", "Martial"]
+    },
+    "Greatsword":{
+        "Damage":"D10",
+        "Tags":["Bladed", "Heavy", "Martial", "Two-Handed"]
+    },
+    "Handaxe":{
+        "Damage":"D6",
+        "Tags":["Basic", "Bladed", "Fine", "Thrown 4 spaces"]
+    },
+    "Hand Crossbow":{
+        "Damage":"D6",
+        "Tags":["Ammunition", "Martial", "Mechanical", "Piercing", "Ranged 6 spaces"]
+    },
+    "Halberd":{
+        "Damage":"D10",
+        "Tags":["Bladed", "Heavy", "Martial", "Reach 2 spaces", "Two-Handed"]
+    },
+    "Javelin":{
+        "Damage":"D6",
+        "Tags":["Basic", "Piercing", "Thrown 12 spaces"]
+    },
+    "Lance":{
+        "Damage":"D8",
+        "Tags":["Charging D8", "Heavy", "Martial", "Mounted", "Piercing"]
+    },
+    "Longbow":{
+        "Damage":"D10",
+        "Tags":["Ammunition", "Heavy", "Martial", "Piercing", "Two-Handed", "Ranged 24 spaces"]
+    },
+    "Longsword":{
+        "Damage":"D8",
+        "Tags":["Bladed", "Martial", "Versatile D10"]
+    },
+    "Mace":{
+        "Damage":"D6",
+        "Tags":["Blunt", "Basic"]
+    },
+    "Maul":{
+        "Damage":"D10",
+        "Tags":["Blunt", "Heavy", "Martial", "Slam", "Two-Handed"]
+    },
+    "Morningstar":{
+        "Damage":"D6",
+        "Tags":["Martial", "Piercing"]
+    },
+    "Pike":{
+        "Damage":"D8",
+        "Tags":["Basic", "Charging D10", "Piercing", "Reach 2 spaces", "Two-Handed"]
+    },
+    "Quarterstaff":{
+        "Damage":"D6",
+        "Tags":["Basic", "Blunt", "Versatile D8"]
+    },
+    "Rapier":{
+        "Damage":"D6",
+        "Tags":["Finesse", "Martial", "Piercing"]
+    },
+    "Scimitar":{
+        "Damage":"D6",
+        "Tags":["Bladed", "Finesse", "Martial"]
+    },
+    "Sickle":{
+        "Damage":"D6",
+        "Tags":["Basic", "Bladed", "Fine"]
+    },
+    "Sling":{
+        "Damage":"D6",
+        "Tags":["Ammunition", "Basic", "Blunt", "Ranged 16 spaces"]
+    },
+    "Spear":{
+        "Damage":"D6",
+        "Tags":["Basic", "Piercing", "Thrown 6 spaces", "Versatile D8"]
+    },
+    "Shortbow":{
+        "Damage":"D8",
+        "Tags":["Ammunition", "Martial", "Mounted", "Piercing", "Ranged 16 spaces", "Two-Handed"]
+    },
+    "Shortsword":{
+        "Damage":"D6",
+        "Tags":["Finesse", "Martial", "Piercing"]
+    },
+    "Trident":{
+        "Damage":"D6",
+        "Tags":["Disarming", "Piercing", "Martial", "Thrown 6 spaces", "Versatile D8"]
+    },
+    "War Pick":{
+        "Damage":"D8",
+        "Tags":["Martial", "Piercing"]
+    },
+    "War Hammer":{
+        "Damage":"D8",
+        "Tags":["Blunt" , "Martial", "Slam"]
+    },
+    "Whip":{
+        "Damage":"D4",
+        "Tags":["Bladed", "Disarming", "Martial", "Reach 3 spaces"]
+    }
+}
