@@ -1,0 +1,723 @@
+{
+    "Animal Friendship" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper"],
+        "Casting Time" : "Action",
+        "Ritual" : true,
+        "Target" : "Self",
+        "Duration" : "1 minute",
+        "Concentration":true,
+        "Short Description" : "Gain Edge on Will rolls against animals.",
+        "Description" : "Gain Edge on Will rolls against creatures with a -4 Aptitude bonus. If the caster succeeds on a Will roll the creature is also Charmed by the caster."
+    },
+    "Arcane Armor" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Ritual" : true,
+        "Target" : "Self",
+        "Short Description" : "Declect becomes 4 and +2 to Soak",
+        "Description" : "The caster's Deflect becomes 4 and add +2 to the caster's Soak. This armor does not impose Hindrance on Enigma rolls. When cast at a higher Tier, add a +1 to Deflect and +1 to Soak for every Tier it is cast at beyond 1st."
+    },
+    "Acrane Orb" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "24 space Range",
+        "Defense" : "React",
+        "Damage":"2D10",
+        "Advance" : "2D10",
+        "Short Description" : "Deal 2D10.",
+        "Description" : "Deal 2D10 to the target. When cast at a higher Tier, add an additional 2d10 for every Tier beyond 1st."
+    },
+    "Arcane Shield" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Response",
+        "Target" : "Self",
+        "Duration" : "1 Round",
+        "Short Description" : "Gain an Edge on Deflect and React defenses.",
+        "Description" : "Gain an Edge on Deflect and React defenses."
+    },
+    "Arcane Step" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Maneuver",
+        "Target" : "self",
+        "Short Description" : "Teleport up to 12 spaces into an unoccupied space.",
+        "Description" : "Teleport up to 12 spaces into an unoccupied space the caster has Line of Effect. When cast at a higher Tier, take an additional adjacent creature for every Tier beyond 1st."
+    },"Bane" : {
+        "Tier":"1",
+        "Archetypes" :["Adherent"],
+        "Casting Time" : "Action",
+        "Target" : "6 space Range",
+        "Defense" : "Mind",
+        "Duration" : "1 minute",
+        "Concentration" : true,
+        "Short Description" : "Attackers have Edge against all the target's defenses, and Edge on defenses against attacks from target.",
+        "Description" : "Attackers have Edge against all the target's defenses, and Edge on defenses against attacks from target."
+    },
+    "Blessing" : {
+        "Tier":"1",
+        "Archetypes" :["Adherent"],
+        "Casting Time" : "Action",
+        "Ritual": true,
+        "Target" : "6 space Range",
+        "Duration" : "1 hour",
+        "Higher Cast" : "Additional target.",
+        "Short Description" : "Creature gains a D4 to all Rolls.",
+        "Description" : "Creature gains a 1d4 to all d12 rolls. When cast at a higher Tier, target an additional creature for every Tier beyond 1st."
+    },
+    "Blur" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper","Wizard"],
+        "Casting Time" : "Maneuver",
+        "Ritual" : true,
+        "Target" : "Touch",
+        "Duration" : "1 minute",
+        "Short Description" : "Gain an Edge on Deflect rolls.",
+        "Description" : "Gain an Edge on Deflect rolls. When cast at a higher Tier, add an additional target for every Tier beyond 1st."
+    },
+    "Bolster" : {
+        "Tier":"1",
+        "Archetypes" :["Adherent","Dedicant"],
+        "Casting Time" : "Action",
+        "Target" : "6 space Range",
+        "Short Description" : "Grant the target 1d10+Spellcasting Bonus Temporary HP. Ends the Bleeding condition.",
+        "Description" : "Grant the target 1d10+Spellcasting Bonus Temporary HP. Ends the Bleeding condition. When cast at a higher Tier, add an additional 1d8 for every Tier beyond 1st."
+    },
+    "Bond of Ward" : {
+        "Tier":"1",
+        "Archetypes" :["Adherent","Dedicant"],
+        "Casting Time" : "Response",
+        "Ritual": true,
+        "Target" : "6 space Range",
+        "Duration" : "1 hour",
+        "Higher Cast" : "Additional target.",
+        "Short Description" : "Target creature gains Edge on defenses and Damage Resistance. When the target loses HP the caster loses the same amount of HP.",
+        "Description" : "Target creature gains Edge on defenses and Damage Resistance. The caster can cast spells with the Self or Touch target on the Target creature regardless of how far apart they are. When the target loses HP the caster loses the same amount of HP. When cast at a higher Tier, add an additional creature for every Tier it is cast at beyond 1st."
+    },
+    "Bonfire" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Wildshaper","Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "6 space Range",
+        "Area" : "1 space Sphere",
+        "Defense" : "React",
+        "Damage":"D6",
+        "Perk": "Burning condition.",
+        "Advance" : "D6",
+        "Short Description" : "Creatures within the bonfire or that move through take 1d6 damage.",
+        "Description" : "Burning condition."
+    },
+    "Change Size" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper", "Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "Touch",
+        "Ritual" : true,
+        "Duration" : "1 hour",
+        "Concentration": true,
+        "Short Description" : "Target is made small or large sized",
+        "Description" : "Target is made small or large sized, their gear changes size along with them. When cast at a higher Tier, target an additional creature for every Tier beyond 1st."
+    },
+    "Charming" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "Self",
+        "Duration" : "1 minute",
+        "Short Description" : "Edge on social rolls and makes Charmed",
+        "Description" : "Gain an Edge on all Social rolls. On a successful roll the target is Charmed by the caster."
+    },
+    "Command" : {
+        "Tier":"1",
+        "Archetypes" :["Adherent","Dedicant"],
+        "Casting Time" : "Action",
+        "Target" : "12 space Range",
+        "Defense" : "Mind",
+        "Short Description" : "Target becomes Charmed and must attempt two word command.",
+        "Description" : "The caster can speak a two word command to the target becomes Charmed and must attempt it. They cannot attempt to kill themselves."
+    },
+    "Comprehend Languages" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Ritual" : true,
+        "Target" : "Self",
+        "Duration" : "1 hour",
+        "Short Description" : "Understand any language the caster hear or read. ",
+        "Description" : "Understand any language the caster hear or read. The caster cannot speak the language or write it."
+    },
+    "Conjure Flame" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Wildshaper"],
+        "Casting Time" : "Action",
+        "Target" : "Self",
+        "Duration" : "1 minute",
+        "Concentration": true,
+        "Short Description" : "A torch sized flame appears in the casters hand that can be used it to light fires.",
+        "Description" : "A torch sized flame appears in the casters hand that can be used it to light fires. As a Maneuver the caster can fling a flame up to 6 spaces by rolling Spellcasting Roll against the target's Deflect that deals 1d6 damage. As a Perk the target gains the Burning condition. Flinging the flame does not end the spell. Increase the die for every Tier the caster is beyond 1st.",
+        "Maneuver" : {
+            "Title" : "Fling Conjured Flame",
+            "Target" : "6 space Range",
+            "Damage" : "D6",
+            "Perk" : "Burning Condition",
+            "Defense" : "Deflect",
+            "Description" : "Flinging the flame does not end the spell."
+        }
+    },
+    "Corpse Grasp" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "Touch",
+        "Defense" : "Deflect",
+        "Damage":"D10",
+        "Perk": "Blightes",
+        "Advance" : "D10",
+        "Short Description" : "Deal 1d10 damage.",
+        "Description" : "Deal 1d10 damage to the target. As a Perk the target is Blighted. Increase the die for every Tier the caster is beyond 1st."
+    },
+    "Cure Wounds" : {
+        "Tier":"1",
+        "Archetypes" :["Adherent","Dedicant","Wildshaper"],
+        "Casting Time" : "1 minute",
+        "Ritual" : true,
+        "Target" : "Touch",
+        "Heal":"D8",
+        "Higher Cast" : "D8",
+        "Short Description" : "Heal the 1d8+Spellcasting Bonus worth of HP.",
+        "Description" : "Heal the 1d8+Spellcasting Bonus worth of HP. When cast at a higher Tier, add an additional 1d8 for every Tier beyond 1st."
+    },
+    "Dancing Light" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "24 space Range",
+        "Duration" : "1 Day",
+        "Advance" : "Additional light",
+        "Short Description" : "Torch sized light within Range that hover within range",
+        "Description" : "Summon a torch sized light within Range that hover in the air for the duration that moves in relationship to the caster. The caster can move the light up to 12 spaces within the Range as a Maneuver. Conjure an additional light by one for every Tier the caster is beyond 1st."
+    },
+    "Dawning Light" : {
+        "Tier":"1",
+        "Archetypes" :["Adherent","Dedicant","Wildshaper"],
+        "Casting Time" : "Action",
+        "Area" : "6 space Aura",
+        "Duration" : "1 hour",
+        "Short Description" : "Glow with Daylight and grant Edge against Undead and Daylight sensitive creatures.",
+        "Description" : "The caster glows with true daylight. Allies have an Edge on all rolls against undead or Daylight sensitive creatures. Dispels magical Darkness if affecting target area."
+    },
+    "Detect Magic" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Maneuver",
+        "Target" : "Self",
+        "Duration" : "1 minute",
+        "Short Description" : "See spells.",
+        "Description" : "See ongoing spells, know what spell is being cast by a creature, or see the remnants of spells that were cast within 1 hour for every Tier the caster is."
+    },
+    "Divine Armament" : {
+        "Tier":"1",
+        "Archetypes" :["Adherent"],
+        "Casting Time" : "Action",
+        "Target" : "12 space Range",
+        "Defense" : "Deflect",
+        "Duration" : "1 minute",
+        "Damage":"D6",
+        "Higher Cast" : "D6",
+        "Short Description" : "Flying weapon deals D6. Move it as a Maneuver",
+        "Description" : "Conjure flying weapon that deals 1d6 damage that can be directed to move up to 12 spaces and attack as a Maneuver. When cast at a higher Tier, add an additional 1d6 for each tier beyond 1st.",
+        "Maneuver" : {
+            "Title" : "Move Armament",
+            "Description" : "Move Divine Armament"
+        }
+    },
+    "Divine Interpose" : {
+        "Tier":"1",
+        "Archetypes" :["Adherent"],
+        "Casting Time" : "Action",
+        "Target" : "12 space Range",
+        "Duration" : "1 hour",
+        "Higher Cast" : "Additional target.",
+        "Short Description" : "Target adds 1d4 to Soak every time they take damage",
+        "Description" : "Target adds 1d4 to Soak every time they take damage. Creature can only have this spell cast on them once at a time. When cast at a higher Tier, add an additional creature for every Tier beyond 1st. If cast as a Ritual the duration becomes 1 day.",
+        "Ritual" : "1 Day"
+    },
+    "Divine Investure" : {
+        "Tier":"1",
+        "Archetypes" :["Adherent","Dedicant"],
+        "Casting Time" : "Action",
+        "Target" : "Self",
+        "Duration" : "1 minute",
+        "Concentration" : true,
+        "Higher Cast" : "D8",
+        "Short Description" : "The caster's weapon bursts with divine energy and deals an additional 1d8 damage",
+        "Description" : "The caster's weapon bursts with divine energy and deals an additional 1d8 damage. The caster can make a Wits+Weapons roll against a target's React defense within 12 spaces dealing 1d8 damage a target. When cast at a higher Tier, add an additional 1d8 for every Tier beyond 1st.",
+        "Action" : {
+            "Title" : "Fire Divine Investure",
+            "Roll" : ["Wits", "Weapons"],
+            "Vs" : "React",
+            "Damage" : "D8",
+            "Tags" : ["12 space Range"]
+        }
+    },
+    "Enhance" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper","Wizard"],
+        "Casting Time" : "Action",
+        "Ritual" : true,
+        "Target" : "Touch",
+        "Concentration" :true,
+        "Short Description" : "Target has Edge on chosen Stat",
+        "Description" : "Target has Edge on rolls with one Stat chosen when the spell is cast. When cast at a higher Tier, add an additional creature for every Tier beyond 1st."
+    },
+    "Entangle" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper"],
+        "Casting Time" : "Action",
+        "Ritual":true,
+        "Target" : "24 space Range",
+        "Area" : "3 space Circle",
+        "Defense" : "Body",
+        "Short Description" : "Makes area Difficult Terrain and targets in area Restrained.",
+        "Description" : "On a success the target is Restrained until the spells end. Each round the caster re-rolls the attack against targets' Body. Even if a creature frees themselves or moves into the target area it is Difficult Terrain. If cast as a Ritual the Duration becomes 1 day and doesn't require Concentration."
+    },
+    "Farspeech" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "the same plane",
+        "Short Description" : "Send a 25 words long message",
+        "Description" : "The caster can send a short message 25 words long to a target on the same plane. The target can respond with a 25 word message of their own. When cast at a higher Tier, add 10 words to the message for every Tier beyond 1st."
+    },
+    "Feather Fall" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper","Wizard"],
+        "Casting Time" : "Response",
+        "Target" : "12 space Range",
+        "Duration" : "1 round",
+        "Short Description" : "Target takes no fall damage.",
+        "Description" : "Target takes no fall damage. When cast at a higher Tier, the spell can target an additional creature for every Tier beyond 1st."
+    },
+    "Fireburst" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "24 space Range",
+        "Area" : "3 space Sphere",
+        "Defense" : "React",
+        "Damage":"3D6",
+        "Perk": "Targets gain Burining Condition",
+        "Higher Tier" : "2D6",
+        "Short Description" : "Deal 3d6 damage.",
+        "Description" : "Deal 3d6 damage to creatures within the target area. As a Perk targets gain the Burning condition. When cast at a higher Tier, add an additional 2d6 for every Tier beyond 1st."
+    },
+    "Flameblade" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper"],
+        "Casting Time" : "Maneuver",
+        "Target" : "Self",
+        "Duration" : "1 hour",
+        "Damage":"2D6",
+        "Short Description" : "Summon a flaming weapon",
+        "Description" : "Summon a flaming weapon that deals 2d6 damage and has the Bladed, Finesse, and Simple Tags. Attacks give the Burning condition. It can be used to start fires. When cast at a higher Tier, add an additional 1d6 for every Tier beyond 1st.",
+        "Action" : {
+            "Title" : "Flameblade Attack",
+            "Roll" : ["Dexterity", "Weapons"],
+            "Vs" : "Deflect",
+            "Damage" : "2D6",
+            "Tags" : ["Bladed", "Finesse", "Simple"]
+        }
+    },
+    "Flare" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "12 space Range",
+        "Defense" : "Body",
+        "Short Description" : "Target Blinded for D6 rounds",
+        "Description" : "Target is Blinded for 1d6 rounds. When cast at a higher Tier, add an additional target for every Tier beyond 1st."
+    },
+    "Fog" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Maneuver",
+        "Target" : "12 space Range",
+        "Area" : "3 space Sphere",
+        "Short Description" : "Creatures gain Cover",
+        "Description" : "Creatures within the fog have Cover. When cast at a higher Tier, increase the radius of the Sphere by one space for every Tier beyond 1st."
+    },
+    "Fortify Spirit" : {
+        "Tier":"1",
+        "Archetypes" :["Adherent"],
+        "Casting Time" : "Action",
+        "Area" : "2 space Aura",
+        "Short Description" : "Allies within the Aura have Edge on Mind rolls and are immune to being Frightened.",
+        "Description" : "Allied creatures within the Aura have Edge on Mind defense rolls and are immune to being Frightened."
+    },
+    "Foxfire" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper"],
+        "Casting Time" : "Action",
+        "Target" : "12 space Range",
+        "Area" : "3 space Sphere",
+        "Defense" : "React",
+        "Short Description" : "Targets glow with Low Light, revealing invisible creatures. Gain Edge against target's Deflect",
+        "Description" : "Targets glow with Low Light, revealing invisible creatures. Rolls against the target's Deflect defense have Edge. When cast at a higher Tier, increase the radius of the Sphere by one space for every Tier beyond 1st."
+    },
+    "Goodberry" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper"],
+        "Ritual" : true,
+        "Target" : "Self",
+        "Short Description" : "Enchant Will+Enigma berries.",
+        "Description" : "Enchant Will+Enigma berries. Each berry heals 1 HP and provides nourishment for 1 day. The berries rot after 1 hour."
+    },
+    "Grease" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "24 space Range",
+        "Area" : "3 space Sphere",
+        "Defense" : "React",
+        "Short Description" : "The area becomes Difficult Terrain. Targets that fail React fall Prone",
+        "Description" : "Targets within the area are covered in grease, those that fail their defense fall prone. The area becomes Difficult Terrain. The grease is flammable, deals 1d6 damage to all creatures within area and ends the spell. When cast at a higher Tier, the damage from igniting the grease increases by 1d6 for every Tier beyond 1st."
+    },
+    "Gust of Wind" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper","Wizard"],
+        "Casting Time" : "Action",
+        "Area" : "6 space Fan",
+        "Defense" : "Body",
+        "Short Description" : "Targets knocked prone, gasses dispersed",
+        "Description" : "Targets that fail their defense are knocked prone. Gasses, mists, and toxic air is dispersed or pushed."
+    },
+    "Heal" : {
+        "Tier":"1",
+        "Archetypes" :["Adherent", "Wildshaper"],
+        "Casting Time" : "Action",
+        "Ritual" : true,
+        "Target" : "Touch",
+        "Short Description" : "Heal one level of Blighted and remove a condition",
+        "Description" : "The target is healed one level of Blighted and one of the following conditions: Blinded, Bleeding, Deafened, Paralyzed, Petrified, Sickened, or Unconscious. When cast at a higher Tier, heal an additional condition for for every Tier beyond 1st."
+    },
+    "Hypnotic Pattern" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "12 space Range",
+        "Area" : "3 space Sphere",
+        "Defense" : "Mind",
+        "Short Description" : "Targets incapacitated and charmed",
+        "Description" : "Targets are incapacitated and charmed by the caster. If the target takes damage the target is released from the spell. When cast at a higher Tier, increase the radius of the spell by 1 space for every Tier over 2nd."
+    },
+    "Leap" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "Touch",
+        "Duration" : "1 minute",
+        "Short Description" : "Target can leap their movement speed in any direction.",
+        "Description" : "As a Maneuver Target can leap their movement speed in any direction. It has to be taken in one movement. When cast at a higher Tier, add two additional creatures for every Tier beyond 1st."
+    },
+    "Levitate" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "Self",
+        "Duration" : "1 hour",
+        "Short Description" : "Hover speed equal to their Stride speed.",
+        "Description" : "The caster gains a Hover speed equal to their Stride speed. When cast at a higher Tier, target an additional creature for each Tier beyond 1st."
+    },
+    "Light":{
+        "Tier":"Cantrip",
+        "Archetypes" :["Adherent"],
+        "Short Description" :"Item glows like torch.",
+        "Description" : "The target item sheds light as if it were a torch. Enchant an additional item for every Tier the caster is beyond 1st."
+    },
+    "Lightning Bolt" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper", "Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "12 space Line",
+        "Defense" : "React",
+        "Damage":"2D5",
+        "Short Description" : "Deal 2D6",
+        "Description" : "Deal 2d6 damage to creatures within target area. When cast at a higher Tier, add an additional 2d6 for each Tier beyond 1st."
+    },
+    "Locate Object" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Ritual",
+        "Target" : "10 Miles",
+        "Short Description" : "Get direction to item",
+        "Description" : "Learn the direction to an object, the distance to an object, and a snapshot of the area around the object from its perspective. If the caster has had the object in their possession, it is a Simple roll, if they have seen the object it is an Easy roll, if they have seen a drawing it is a Hard roll, and if they have only heard a description it is a Desperate roll. When cast at a higher Tier, multiply the Target by 10 for each Tier beyond 1st."
+    },
+    "Mage Grounding" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "6 space Range",
+        "Defense" : "Body",
+        "Damage":"2D8",
+        "Short Description" : "Target takes 2d8 damage. During each of the caster turns they can continue the spell with a Maneuver. ",
+        "Description" : "Target takes 2d8 damage. During each of the caster turns they can continue the spell with a Maneuver. Subsequent rounds automatically hit. On the target's next round they have a Hindrance on all rolls. If the target leaves the range or gains Full Cover the spell ends. When cast at a higher Tier, add an additional 1d8 for each Tier beyond 1st.",
+        "Maneuver" : {
+            "Title" : "Maintain Mage Grounding",
+            "Damage" : "2D8"
+        }
+    },
+    "Mage Hand" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "6 space Range",
+        "Defense" : "React",
+        "Damage":"D4",
+        "Short Description" : "Lift or manipulate an item less than 5lbs or deal 1d4 damage",
+        "Description" : "Manifests a translucent hand can lift or manipulate an item less than 5lbs or deal 1d4 damage to a target. The weight it can manipulate increases by 5lbs and the damage it does increases by 1d4 for every Tier the caster is beyond 1st."
+    },
+    "Masquerade" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper","Wizard"],
+        "Casting Time" : "Action",
+        "Ritual" : true,
+        "Target" : "Touch",
+        "Duration" : "1 hour",
+        "Short Description" : "Disguise the target. Target gains Edge on rolls against disguise",
+        "Description" : "Change the target's form to appear as a humanoid wearing whatever clothes the caster chooses. If the target is masquerading as another creature they have Edge on rolls against their disguise. When cast at a higher Tier, an additional two creatures can be transformed for each Tier beyond 1st."
+    },
+    "Message" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Maneuver",
+        "Target" : "24 space Range",
+        "Duration" : "1 hour",
+        "Short Description" : "Inaudibly send a short message",
+        "Description" : "Inaudibly send a short message to a creature within Range. The targets can reply to the caster with an inaudible short message of their own. The targets increase by one for every Tier the caster is beyond 1st."
+    },
+    "Mold Earth" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Wildshaper","Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "12 space Range",
+        "Area" : "1 space Cube",
+        "Perk" : "Creature in the target area is Exposed",
+        "Short Description" : "Move earth within the target area",
+        "Description" : "Move an area of earth that fits within the target area, excavating, building up, and shaping it. It does not move fast enough to bury someone or cause fall damage if excavated below a creature. As a Perk a creature in the target area is Exposed The area targeted increases by another 1 space Cube for every Tier the caster is beyond 1st."
+    },
+    "Moonbeam" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper"],
+        "Casting Time" : "Action",
+        "Target" : "12 space Range",
+        "Area" : "3 space Circle",
+        "Defense" : "Body",
+        "Damage":"3D6",
+        "Short Description" : "Deals 3d6 damage",
+        "Description" : "A beam shines down dealing 3d6 damage. Half as much on a successful defense. When cast at a higher Tier, add an additional 2d6 for each tier beyond 1st."
+    },
+    "Prestidigitation" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "3 space Range",
+        "Area" : "1 space Cube",
+        "Short Description" : "Dry, moisten, clean, snuff candles, light candles, or create a strong breeze",
+        "Description" : "The caster can dry, moisten, clean, snuff candles, light candles, or create a strong breeze in the area. The Cube area increases by 1 for every Tier the caster is beyond 1st."
+    },
+    "Primal Strike" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Wildshaper"],
+        "Casting Time" : "Action",
+        "Target" : "Touch",
+        "Defense" : "Deflect",
+        "Damage":"D8",
+        "Perk": "Target gains Bleeding",
+        "Advance" : "D8",
+        "Short Description" : "Deals 1d8 damage",
+        "Description" : "The target takes 1d8 damage. Increase the die for every Tier the caster is beyond 1st."
+    },
+    "Purifying Flame" : {
+        "Tier":"Cantrip",
+        "Casting Time" : "Action",
+        "Target" : "12 space Range",
+        "Defense" : "React",
+        "Damage":"D8",
+        "Perk": "Target is Blinded until the end of their next Turn.",
+        "Advance" : "D8",
+        "Short Description" : "The target takes 1d8 damage",
+        "Description" : "The target takes 1d8 damage. As a Perk the target is Blinded until the end of their next Turn. Increase the die for every Tier the caster is beyond 1st."
+    },
+    "Scintillating Lights" : {
+        "Tier":"",
+        "Archetypes" :[""],
+        "Casting Time" : "",
+        "Target" : "",
+        "Defense" : "",
+        "Damage":"",
+        "Perk": "",
+        "Advance" : "",
+        "Short Description" : "",
+        "Description" : ""
+    },
+    "Shape Flesh" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper","Wizard"],
+        "Casting Time" : "Action",
+        "Ritual" : true,
+        "Target" : "Self",
+        "Duration" : "1 hour",
+        "Short Description" : "Gain new Swim, Fly, Soak, or D6 natural weapon",
+        "Description" : "Change the caster's form to give them one new capability. They can adapt to an aquatic environment with a 6 space Swim speed, grow functional wings with a 6 space Fly speed, grow armor plates that increase their Soak by 2, or gain a natural weapon that deals 1d6 damage per character Tier. When cast at a higher Tier, the caster can add an additional capability for every Tier beyond 1st."
+    },
+    "Shield of Faith" : {
+        "Tier":"1",
+        "Archetypes" :["Adherent","Dedicant"],
+        "Casting Time" : "Response",
+        "Target" : "6 space Range",
+        "Short Description" : "Target has an Edge on their defenses.",
+        "Description" : "Target has an Edge on their defenses."
+    },
+    "Silence" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper","Wizard"],
+        "Casting Time" : "Action",
+        "Ritual":true,
+        "Target" : "24 space Range",
+        "Area" : "3 space Sphere",
+        "Duration" : "10 minutes",
+        "Short Description" : "No silence is heard within the area nor do any leave the area.",
+        "Description" : "No silence is heard within the area nor do any leave the area. When cast at a higher Tier, increase the radius of the Sphere by 1 space for every Tier beyond 1st."
+    },
+    "Snuff Light" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper","Wizard"],
+        "Casting Time" : "Action",
+        "Ritual" : true,
+        "Target" : "24 space Range",
+        "Area":"3 space Sphere",
+        "Duration" : "10 minutes",
+        "Concentration" : true,
+        "Short Description" : "Magical darkness",
+        "Description" : "The area is plunged into magical darkness blocking all light sources within it, including those from magical sources."
+    },
+    "Speak with Animals" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper"],
+        "Casting Time" : "Action",
+        "Ritual" : true,
+        "Target" : "Self",
+        "Duration" : "1 minute",
+        "Concentration":true,
+        "Short Description" : "Speak with beasts and they are Charmed.",
+        "Description" : "Speak with animals as if they have an Aptitude of - 1 and are Charmed by the caster. If the spell is cast as a Ritual the duration becomes 1 hour."
+    },
+    "Spike Field" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper"],
+        "Casting Time" : "Action",
+        "Ritual" : true,
+        "Target" : "12 space Range",
+        "Area" : "3 space Circle",
+        "Damage":"D6",
+        "Short Description" : "Hazardous Terrain that deals 1d6 damage",
+        "Description" : "Area becomes Hazardous Terrain that deals 1d6 damage. When cast at a higher Tier, add an additional die for each tier beyond 1st."
+    },
+    "Teleportation Anchor" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Ritual" : true,
+        "Area" : "1 space Circle",
+        "Short Description" : "Create a unique teleportation circle",
+        "Description" : "Create a unique teleportation circle that makes teleportation to the circle easier. When cast at a higher Tier, increase the radius of the Circle by 1 space for every Tier beyond 1st. If cast as a Ritual the anchor becomes Permanent."
+    },
+    "Thorn Whip" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Wildshaper"],
+        "Casting Time" : "Action",
+        "Target" : "3 space Range",
+        "Defense" : "Deflect",
+        "Damage":"D6",
+        "Perk": "Target is Exposed",
+        "Advance" : "D6",
+        "Short Description" : "Deals 1d6 damage, the target is pulled up to 3 spaces closer to the caster.",
+        "Description" : "Conjure a whip that has a 3 space Reach that deals 1d6 damage and the target is pulled up to 3 spaces closer to the caster. As a Perk the target is Exposed. Increase the die for every Tier the caster is beyond 1st."
+    },
+    "Thunderblast" : {
+        "Tier":"1",
+        "Archetypes" :["Dedicant","Wildshaper","Wizard"],
+        "Casting Time" : "Action",
+        "Area" : "3 space Fan",
+        "Defense" : "Body",
+        "Damage":"D10",
+        "Perk": "Targets knocked Prone",
+        "Short Description" : "Deals 1d10 damage, are pushes 3 spaces.",
+        "Description" : "Targets take 1d10 damage, are pushed 3 spaces. As a Perk targets are knocked Prone. Add an additional die for each tier beyond 1st it is cast at."
+    },
+    "Thunderstrike" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Wildshaper"],
+        "Casting Time" : "Action",
+        "Target" : "Touch",
+        "Defense" : "Body",
+        "Damage":"D8",
+        "Perk" : "Target is Deafened until end of next turn",
+        "Short Description" : "Deals D8 and push 1 space",
+        "Description" : "Target takes 1d8 damage and is pushed 1 space. As a Perk the target is Deafened until the end of their next turn. Increase the die and the spaces pushed by 1 for every Tier the caster is beyond 1st."
+    },
+    "Tremor" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper"],
+        "Casting Time" : "Maneuver",
+        "Target" : "24 space Range",
+        "Area" : "3 space Circle",
+        "Defense" : "Body",
+        "Damage":"D6",
+        "Short Description" : "Targets fall prone and take 1d6 damage.",
+        "Description" : "Targets fall prone and take 1d6 damage. When cast at a higher Tier, add an additional 1d6 for each tier beyond 1st."
+    },
+    "Unerring Bolt" : {
+        "Tier":"1",
+        "Archetypes" :["Wizard"],
+        "Casting Time" : "Action",
+        "Target" : "12 space Range",
+        "Short Description" : "Three bolts of energy, each deals D4 damage",
+        "Description" : "Fire three separate bolts of energy, each deals 1d4 damage as separate attacks and automatically hits. When cast at a higher Tier, add an additional two bolts of energy for each Tier beyond 1st."
+    },
+    "Whipser of Life" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Adherent"],
+        "Casting Time" : "Action",
+        "Target" : "12 space Range",
+        "Perk": "Target is no longer Unconcious",
+        "Advance" : "Another Target",
+        "Short Description" : "Target dying creature stabilizes, reset's death saves, and grants 1d6 Temporary HP.",
+        "Description" : "Target dying creature stabilizes, reset's death saves, and grants 1d6 Temporary HP. As a Perk the target is no longer Unconscious. Target another creature for every tier the caster is beyond 1st."
+    },
+    "Winter's Blast" : {
+        "Tier":"1",
+        "Archetypes" :["Wildshaper","Wizard"],
+        "Casting Time" : "Action",
+        "Area" : "6 space Fan",
+        "Defense" : "Body",
+        "Damage":"3D6",
+        "Short Description" : "Deal 3d6 damage",
+        "Description" : "Deal 3d6 to creatures within the target area. When cast at a higher Tier, add an additional 2d6 for each tier beyond 1st at."
+    },
+    "Wounding Chant" : {
+        "Tier":"Cantrip",
+        "Archetypes" :["Adherent"],
+        "Casting Time" : "Action",
+        "Target" : "12 space Range",
+        "Defense" : "Body",
+        "Damage":"D6",
+        "Perk": "As a Perk they gain the Bleeding condition.",
+        "Advance" : "D6",
+        "Short Description" : "Target takes 1d6 damage. If they are already wounded the target takes 1d10 instead.",
+        "Description" : "Target takes 1d6 damage. If they are already wounded the target takes 1d10 instead. As a Perk they gain the Bleeding condition. Increase the die for every Tier the caster is beyond 1st."
+    }
+}

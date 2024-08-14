@@ -179,9 +179,7 @@ class CharacterSheetController extends Controller
                     }else{
                         $out["Features"][$curr_feature["Title"]] = "";
                     }
-                }elseif(isset($curr_feature["Action"])){ //unused
-
-                    
+                }elseif(isset($curr_feature["Action"])){ //unused      
                 }elseif(isset($curr_feature["Maneuver"])){ //done
                     dump($curr_feature);
                     if(isset($curr_feature["Maneuver"]["Movement"])){
@@ -295,7 +293,7 @@ class CharacterSheetController extends Controller
             }
         }
 
-        
+
         dd($character, $out, $compendium);
     }
 }
