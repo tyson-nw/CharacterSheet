@@ -265,9 +265,11 @@
         "Title":"Wildshape",
         "Tier":1,
         "Archetype":"Wildshaper",
+        "Short Description" : "Wildshape into {{Subfeatures}}",
         "Description": "As a Maneuver a Wildshaper can roll against their Burn to polymorph into one of two Beasts of Challenge 2 or lower that the Wildeshaper knows. Communing with nature as a Downtime action they can change what beasts they can polymorph into. They gain the beast's HP inTemporary HP along with its Strength, Fortitude, and Dexterity bonuses. Their Defenses, Deflect and Soak are derived from these new bonuses. When the Wild Shaped Wildshaper's  Temporary HP is reduced to 0 they revert to their natural form and take any additional damage left over from the attack. Wildshaping increases their Burn by 2. The Wildshaper has two shapes they can wildshape into.",
         "Maneuver" : {
-            "Description" : "Wildshape into {{subfeatures}}",
+            "Title" : "Wildshape",
+            "Description" : "Wildshape into {{Subfeatures}}",
             "Roll" : ["Will","Focus"],
             "Vs" : "Burn",
             "Burn" : 2,
@@ -339,7 +341,6 @@
         "Ancestry" : "Dwarf",
         "Description" : "Dwarves have Edge on Body Rolls.",
         "Bonus" : {
-            "Description" : "Edge on Body Rolls.",
             "Body": "Edge"
         }
     },
@@ -354,8 +355,7 @@
         "Ancestry" : "Elf",
         "Description" : "A D4 is added to Senses Rolls.",
         "Bonus" : {
-            "Senses" : "D4",
-            "Description" : "+D4 to Senses Rolls."
+            "Senses" : "+D4"
         }
     },
     "Gnome-MechanicalMind" : {
@@ -364,7 +364,6 @@
 
         "Description" : "Gnomes have Edge on Mind Rolls.",
         "Bonus" : {
-            "Description" : "Edge on Mind Rolls.",
             "Mind": "Edge"
         }
     },
@@ -386,9 +385,8 @@
         "Ancestry" : "Halfun",
         "Description" : "As a Response a Halfun can add an additional D4 to any Roll",
         "Reaction":{
-            "Bonus" : {
-                "Roll" : "D4"
-            }
+            "Title" : "Luck",
+            "Description" : "Add a D4 to your previous Roll."
         }
     },
     "Halfun-Vanish" : {
@@ -397,7 +395,7 @@
         "Short Description" : "Add a D4 to their Stealth Rolls.",
         "Description" : "Halfuns add a D4 to their Stealth Rolls.",
         "Bonus" : {
-            "Stealth" : "D4"
+            "Stealth" : "+D4"
         }
     },
     "Halfun-SmallStature" : {
@@ -424,7 +422,7 @@
         "Short Description" : "Heal additional D4 HP.",
         "Description" : "When recovering HP, humans recover an additional D4 HP.",
         "Bonus" : {
-            "Healing" : "D4"
+            "Healing" : "+D4"
         }
     },
     "Orc-Relentless" : {
