@@ -118,7 +118,9 @@
 
             @isset($out["Spellcasting Feature"]["Fervor"])
                 <div id="Fervor">
-                    <div id="CurrFervor"><strong>Fervor</strong></div>
+                    <strong>Fervor</strong><div id="CurrentFervor"></div>
+                    
+                    
                 </div>
             @endisset
 
