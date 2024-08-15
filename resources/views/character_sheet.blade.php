@@ -120,13 +120,11 @@
                         <strong>{{$action['Title']}}</strong> 
                         
                         @isset($action["Vs"])
-                        +{{$action['Bonus']}} vs. {{$action["Vs"]}}
+                        +{{$action['Bonus']}} vs. {{$action["Vs"]}}@isset($action["Damage"])({{$action["Damage"]}}@isset($action["Additional Damage"])+{{implode("+", $action["Additional Damage"])}}@endisset+{{$action['Dmg Bonus']}} Damage)@endisset,
                         @endisset
-                        @isset($action["Damage"])
-                            ({{$action["Damage"]}}@isset($action["Additional Damage"])+{{implode("+", $action["Additional Damage"])}}@endisset+{{$action['Dmg Bonus']}} Damage)
-                        @endisset 
-                        @isset($action["Tags"]){{$action["Tags"]}}@endisset
-                        @isset($action["Description"])- {{$action["Description"]}}@endisset
+
+                        @isset($action["Tags"]){{$action["Tags"]}},@endisset
+                        @isset($action["Description"]) {{$action["Description"]}}@endisset
                     </li>
                     @endforeach
                     
@@ -144,8 +142,8 @@
                                 @isset($action["Damage"])
                                     ({{$action["Damage"]}}@isset($action["Additional Damage"])+{{implode("+", $action["Additional Damage"])}}@endisset+{{$action['Dmg Bonus']}} Damage)
                                 @endisset 
-                                @isset($action["Tags"]){{$action["Tags"]}}@endisset
-                                @isset($action["Description"])- {{$action["Description"]}}@endisset
+                                @isset($action["Tags"]){{$action["Tags"]}},@endisset
+                                @isset($action["Description"]) {{$action["Description"]}}@endisset
                             </li>
                         @else
                             <li><strong>{{$name}}</strong> {{$action}}</li>
@@ -166,8 +164,8 @@
                                 @isset($action["Damage"])
                                     ({{$action["Damage"]}}@isset($action["Additional Damage"])+{{implode("+", $action["Additional Damage"])}}@endisset+{{$action['Dmg Bonus']}} Damage)
                                 @endisset 
-                                @isset($action["Tags"]){{$action["Tags"]}}@endisset
-                                @isset($action["Description"])- {{$action["Description"]}}@endisset
+                                @isset($action["Tags"]){{$action["Tags"]}},@endisset
+                                @isset($action["Description"]) {{$action["Description"]}}@endisset
                             </li>
                         @else
                             <li><strong>{{$name}}</strong> {{$action}}</li>
@@ -189,8 +187,8 @@
                                     @isset($action["Damage"])
                                         ({{$action["Damage"]}}@isset($action["Additional Damage"])+{{implode("+", $action["Additional Damage"])}}@endisset+{{$action['Dmg Bonus']}} Damage)
                                     @endisset 
-                                    @isset($action["Tags"]){{$action["Tags"]}}@endisset
-                                    @isset($action["Description"])- {{$action["Description"]}}@endisset
+                                    @isset($action["Tags"]){{$action["Tags"]}},@endisset
+                                    @isset($action["Description"]) {{$action["Description"]}}@endisset
                                 </li>
                             @else
                                 <li><strong>{{$name}}</strong> {{$action}}</li>
@@ -212,21 +210,59 @@
             <div id="Features">
                 <strong>Features:</strong>
                 <ul>
-                    @foreach($out['Features'] as $name=>$description)
-                        <li><strong>{{$name}}</strong> {{$description}}</li>
+                    @foreach($out['Features'] as $name=>$feature)
+                        @dump($feature)
+                        <li><strong>{{$name}}</strong>
+                        @isset($feature["Spellcasting Bonus"])
+                            Spellcasting Bonus: +{{$feature["Spellcasting Bonus"]}} 
+                            @isset($feature["Base Burn"])
+                                Base Burn: {{$feature["Base Burn"]}}
+                            @endisset
+                            <br/>
+                            @isset($feature["Cantrips"])Cantrips: {{$feature["Cantrips"]}}@endisset
+                            @isset($feature["Tier 1"])Tier 1: {{$feature["Tier 1"]}} Max Tier: {{$feature["Max Tier"]}} To Prepare: {{$feature["To Prepare"]}}@endisset
+                        @endisset
                     @endforeach
                 </ul>
         </div>
         <div class="page">
             <h2>Compendium</h2>
             @foreach($out["Compendium"] as $name=>$description)
-                <h3>{{$name}}</h3>
+                <h4>{{$name}}</h4>
                 <p>{{$description}}</p>
             @endforeach
         </div>
         @isset ($out["Spells"])
         <div class="page">
             <h2>Spells</h2>
+
+            @foreach($out["Spells"] as $tier => $spells)
+                @if($tier == "Cantrip")
+                    <h3>Cantrip</h3>
+                @endif
+
+                @if($tier == "1")
+                    <h3>Tier 1</h3>
+                @endif
+
+                
+                @foreach($spells as $spell_name=>$spell_details)
+                    @dump($spell_name, $spell_details)
+                    <h4>{{$spell_name}}</h4>
+                    <ul>
+                        @if($spell_details["Tier"] == "Cantrip")
+                            <li><strong>Tier</strong> Cantrip</li>
+                        @elseif($spell_details["Tier"] == "1")
+                            <li><strong>Tier</strong> 1</li>
+                        @endif
+                        <li><strong>Casting Time</strong> {{$spell_details["Casting Time"]}} @isset($spell_details["Ritual"]), Ritual @endisset</li>
+                        @isset($spell_details["Tags"]) <li><strong>Target</strong> {{$spell_details["Tags"]}}@isset($spell_details["Defense"]), {{$spell_details["Defense"]}}@endisset @endisset </li>
+                        @isset($spell_details["Duration"])<li><strong>Duration</strong> {{$spell_details["Duration"]}}@isset($spell_details["Concentration"]), Concentration @endisset @endisset</li>
+                    </ul>
+                    <p>{{$spell_details["Description"]}}
+                @endforeach 
+                         
+            @endforeach
         </div>
         @endisset
 

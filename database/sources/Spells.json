@@ -46,7 +46,8 @@
         "Target" : "self",
         "Short Description" : "Teleport up to 12 spaces into an unoccupied space.",
         "Description" : "Teleport up to 12 spaces into an unoccupied space the caster has Line of Effect. When cast at a higher Tier, take an additional adjacent creature for every Tier beyond 1st."
-    },"Bane" : {
+    },
+    "Bane" : {
         "Tier":"1",
         "Archetypes" :["Adherent"],
         "Casting Time" : "Action",
@@ -107,8 +108,12 @@
         "Damage":"D6",
         "Perk": "Burning condition.",
         "Advance" : "D6",
-        "Short Description" : "Creatures within the bonfire or that move through take 1d6 damage.",
-        "Description" : "Burning condition."
+        "Description" : "Creatures within the bonfire or that move through it that fail their React take 1d6 damage. As a Perk they gain the Burning condition. As a Maneuver the caster can move the bonfire 6 spaces. Increase the die for every Tier the caster is beyond 1st.",
+        "Short Description" : "Deal D6 damage to creatures within or move through.",
+        "Maneuver" : {
+            "Title" : "Move Bonfire",
+            "Description" : "Move the bonfire 6 spaces."
+        }
     },
     "Change Size" : {
         "Tier":"1",
