@@ -31,7 +31,7 @@ class CharacterSheetController extends Controller
             "Stats" => $character["Stats"],
             "Skills" => $character["Skills"],
             "Expertises" => $character["Expertises"],
-            "Treasure" => $character["Treasure"]
+            "Treasure" => $character["Treasure"],
         );
 
         if(isset($out["Expertises"]["Bows"])){
@@ -165,7 +165,6 @@ class CharacterSheetController extends Controller
             if (isset($features_model->data[$feature])){
                 $curr_feature = $features_model->data[$feature];
                 $out["Compendium"][$curr_feature["Title"]] = $curr_feature["Description"];
-                dump($character);
                 /**
                  * Parse Weapon Actions
                  */
@@ -289,15 +288,14 @@ class CharacterSheetController extends Controller
                         $out["Fervor"] = 0;
                     }
 
-                    dump($out["Features"][$curr_feature["Title"]]);
-
                     if(isset($curr_feature["Spellcasting Feature"]["Cantrips"])){
-                        $out["Features"][$curr_feature["Title"]]["Cantrips"] = $curr_feature["Spellcasting Feature"]["Cantrips"];
+                        $out["Features"][$curr_feature["Title"]]["Cantrips"] = $out["Spellcasting Feature"]["Cantrips"];
                     }
-                    $out["Features"][$curr_feature["Title"]]["Prepare"] = strval($out["Stats"][$curr_feature["Spellcasting Feature"]["Prepare"][0]] + $out["Skills"][$curr_feature["Spellcasting Feature"]["Prepare"][1]]);
-                    $out["Features"][$curr_feature["Title"]]["To Prepare"] = $curr_feature["Spellcasting Feature"]["To Prepare"];
 
-                    $out["Features"][$curr_feature["Title"]]["Max Tier"] = $curr_feature["Spellcasting Feature"]["Max Tier"];
+                    $out["Features"][$curr_feature["Title"]]["Prepare"] = strval($out["Stats"][$out["Spellcasting Feature"]["Prepare"][0]] + $out["Skills"][$out["Spellcasting Feature"]["Prepare"][1]]);
+                    $out["Features"][$curr_feature["Title"]]["To Prepare"] = $out["Spellcasting Feature"]["To Prepare"];
+
+                    $out["Features"][$curr_feature["Title"]]["Max Tier"] = $out["Spellcasting Feature"]["Max Tier"];
                     
                 }else{
                     if(isset($curr_feature["Description"])){
@@ -316,10 +314,19 @@ class CharacterSheetController extends Controller
             $out["Spells"] = array();
 
             foreach ($character["Spells"] as $spell_name=>$value){
+
                 if ($spells_model->has($spell_name)){
                     $spell_details = $spells_model->data[$spell_name];
-                    $out["Spells"][$spell_details["Tier"]][$spell_name] = $spell_details;
-                    
+                                        
+                    $tier = "";
+                    if($spell_details["Tier"] == "Cantrip"){
+                        $tier = "Cantrips";
+                        $out["Spells"][$tier][$spell_name] = $spell_details;    
+                    }else{ 
+                        $tier = "Tier " . $spell_details["Tier"];
+                        $out["Spells"][$tier][$spell_name] = $spell_details;
+                    }
+                                        
                     $casting_time = $spell_details["Casting Time"] . "s";
                     $out[$casting_time][$spell_name] = array();
                     $out[$casting_time][$spell_name]["isSpell"] = true;
@@ -344,7 +351,7 @@ class CharacterSheetController extends Controller
                         $out["Perks"][$spell_name] = $spell_details["Perk"];
                     }
                     
-                    $out["Spells"][$spell_details["Tier"]][$spell_name]["Tags"] = $out[$casting_time][$spell_name]['Tags'];
+                    $out["Spells"][$tier][$spell_name]["Tags"] = $out[$casting_time][$spell_name]['Tags'];
                     $out[$casting_time][$spell_name]['Description'] = $spell_details["Short Description"];
 
                     if(isset($spell_details["Maneuver"])){
