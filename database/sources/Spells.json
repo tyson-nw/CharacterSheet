@@ -434,6 +434,7 @@
     "Light":{
         "Tier":"Cantrip",
         "Archetypes" :["Adherent"],
+        "Casting Time" : "Action",
         "Short Description" :"Item glows like torch.",
         "Description" : "The target item sheds light as if it were a torch. Enchant an additional item for every Tier the caster is beyond 1st."
     },

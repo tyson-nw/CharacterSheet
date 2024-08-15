@@ -7,6 +7,8 @@ use App\Models\Features;
 use App\Models\Armor;
 use App\Models\Perks;
 use App\Models\Weapons;
+use App\Models\Spells;
+use Illuminate\Support\Arr;
 
 use function PHPUnit\Framework\stringContains;
 
@@ -19,7 +21,9 @@ class CharacterSheetController extends Controller
     {
         $character = json_decode(base64_decode($encoded, true), true);
         
-        $compendium = array(); //Details of each feature and whatnot.
+        $out["Compendium"] = array(); //Details of each feature and whatnot.
+
+        dump($character);
 
         $out = array(
             "Name" => $character["CharacterName"], 
@@ -52,6 +56,7 @@ class CharacterSheetController extends Controller
         $weapons_model = new Weapons();
         $armor_model = new Armor();
         $perks_model = new Perks();
+        $spells_model = new Spells();
 
         $out["Spellcasting Feature"] = null;
         $out["Perks"] = array();
@@ -99,7 +104,7 @@ class CharacterSheetController extends Controller
                 foreach ($weapons_model->data[$equip]["Tags"] as $tag){
                     if ($perks_model->has($tag)){
                         $out["Perks"][$tag] = $perks_model->data[$tag]["Description"];
-                        $compendium[$tag] = $perks_model->data[$tag]["Description"];
+                        $out["Compendium"][$tag] = $perks_model->data[$tag]["Description"];
                     }
                 }
                 $out["Actions"][$action['Title']] = $action;
@@ -142,9 +147,9 @@ class CharacterSheetController extends Controller
                     $manuver["Damage"]="D6";
                     $manuver["Tags"] = ["Shield", "Slam"];
                     $out["Perks"]["Shield"] = $perks_model->data["Shield"]["Description"];
-                    $compendium["Shield"] = $perks_model->data[$tag]["Description"];
+                    $out["Compendium"]["Shield"] = $perks_model->data[$tag]["Description"];
                     $out["Perks"]["Slam"] = $perks_model->data["Slam"]["Description"];
-                    $compendium["Slam"] = $perks_model->data[$tag]["Description"];
+                    $out["Compendium"]["Slam"] = $perks_model->data[$tag]["Description"];
                 }
             }
         }
@@ -159,7 +164,7 @@ class CharacterSheetController extends Controller
         foreach ($character["Features"] as $feature=>$has){
             if (isset($features_model->data[$feature])){
                 $curr_feature = $features_model->data[$feature];
-                $compendium[$curr_feature["Title"]] = $curr_feature["Description"];
+                $out["Compendium"][$curr_feature["Title"]] = $curr_feature["Description"];
                 /**
                  * Parse Weapon Actions
                  */
@@ -181,7 +186,7 @@ class CharacterSheetController extends Controller
                     }
                 }elseif(isset($curr_feature["Action"])){ //unused      
                 }elseif(isset($curr_feature["Maneuver"])){ //done
-                    dump($curr_feature);
+                    $out["Maneuvers"][$curr_feature["Title"]]["Title"] = $curr_feature["Title"];
                     if(isset($curr_feature["Maneuver"]["Movement"])){
                         $stride = 6;                     
                         if(str_contains($curr_feature["Maneuver"]["Description"], "{{Stride}}")){
@@ -217,6 +222,14 @@ class CharacterSheetController extends Controller
                         $out["Features"][$curr_feature["Title"]] = "";
                     }
 
+                    if(str_contains($out["Features"][$curr_feature["Title"]], "{{Stride}}")){
+                        $stride = 6;
+                        if(isset($character["Features"]["Halfun-SmallStature"]) || isset($character["Features"]["Gnome-SmallStature"])){
+                            $stride = 5;
+                        }
+                        $out["Features"][$curr_feature["Title"]] = str_replace("{{Stride}}" , $stride,$out["Features"][$curr_feature["Title"]]);
+                    }
+
                 }elseif(isset($curr_feature["Interaction"])){ //done
                     $title = $feature;
                     if (isset($curr_feature["Title"])){
@@ -224,15 +237,17 @@ class CharacterSheetController extends Controller
                     }
                     $out["Interaction"][$title] = [];
                     
-                    $skill_bonus = 0;
-                    if(isset($curr_feature["Interaction"]["Roll"][1]) && isset($out["Skills"][$curr_feature["Interaction"]["Roll"][1]])){
-                        $skill_bonus = $out["Skills"][$curr_feature["Interaction"]["Roll"][1]];
+                    if(isset($curr_feature["Interaction"]["Roll"])){
+                        $skill_bonus = 0;
+                        if(isset($curr_feature["Interaction"]["Roll"][1]) && isset($out["Skills"][$curr_feature["Interaction"]["Roll"][1]])){
+                            $skill_bonus = $out["Skills"][$curr_feature["Interaction"]["Roll"][1]];
+                        }
+                        $expertise_bonus = 0;
+                        if(isset($curr_feature["Interaction"]["Roll"][2]) && isset($out["Expertises"][$curr_feature["Interaction"]["Roll"][2]])){
+                            $expertise_bonus = 2;
+                        }
+                        $out["Interaction"][$title]["Bonus"] = $out["Stats"][$curr_feature["Interaction"]["Roll"][0]] + $skill_bonus + $expertise_bonus;                            
                     }
-                    $expertise_bonus = 0;
-                    if(isset($curr_feature["Interaction"]["Roll"][2]) && isset($out["Expertises"][$curr_feature["Interaction"]["Roll"][2]])){
-                        $expertise_bonus = 2;
-                    }
-                    $out["Interaction"][$title]["Bonus"] = $out["Stats"][$curr_feature["Interaction"]["Roll"][0]] + $skill_bonus + $expertise_bonus;                            
                                           
                     
                     if(isset($curr_feature["Interaction"]["Vs"])){
@@ -261,8 +276,9 @@ class CharacterSheetController extends Controller
                     $out["Maneuvers"]["Stride"] = $curr_feature["Stride"];
                 }elseif(isset($curr_feature["Enigma"])){ //done
                     $out["Spellcasting Feature"] = $curr_feature["Enigma"];
-                    $spellcasting_bonus = $out["Stats"][$curr_feature["Enigma"]["Spellcasting Bonus"][0]] + $out["Skills"][$curr_feature["Enigma"]["Spellcasting Bonus"][1]];
-                    $out["Features"][$curr_feature["Title"]] = "Spellcasting Bonus: +" . strval($spellcasting_bonus);
+                    $out["Spellcasting Bonus"] = $out["Stats"][$curr_feature["Enigma"]["Spellcasting Bonus"][0]] + $out["Skills"][$curr_feature["Enigma"]["Spellcasting Bonus"][1]];
+
+                    $out["Features"][$curr_feature["Title"]] = "Spellcasting Bonus: +" . strval($out["Spellcasting Bonus"]);
                     if(isset($curr_feature["Enigma"]["Base Burn"])){
                         $out["Features"][$curr_feature["Title"]] .= " Base Burn: ". $curr_feature["Enigma"]["Base Burn"];
                         $out["Burn"] = array("Base Burn"=>$curr_feature["Enigma"]["Base Burn"], "Current Burn"=>$curr_feature["Enigma"]["Base Burn"]);
@@ -294,6 +310,43 @@ class CharacterSheetController extends Controller
         }
 
 
-        dd($character, $out, $compendium);
+        /**
+         * Add Spells
+         */
+
+        if(isset($character["Spells"])){
+            $out["Spells"] = array();
+
+            foreach ($character["Spells"] as $spell_name=>$value){
+                if ($spells_model->has($spell_name)){
+                    $spell_details = $spells_model->data[$spell_name];
+                    $out["Spells"][$spell_name] = $spell_details;
+
+                    $casting_time = $spell_details["Casting Time"] . "s";
+                    $out[$casting_time][$spell_name] = array();
+                    $out[$casting_time][$spell_name]["isSpell"] = true;
+                    $out[$casting_time][$spell_name]['Title'] = $spell_name;
+                    $out[$casting_time][$spell_name]['Bonus'] = $out["Spellcasting Bonus"];
+                    if(isset($spell_details["Defense"])){
+                        $out[$casting_time][$spell_name]['Vs'] = $spell_details["Defense"];
+                    }elseif(isset($out["Burn"])){
+                        $out[$casting_time][$spell_name]['Vs'] = "Burn";
+                    }
+
+                    $tags = array();
+                    if(isset($spell_details["Target"])) {
+                        $tags[] = $spell_details["Target"];
+                    }
+                    if(isset($spell_details["Area"])) {
+                        $tags[] = $spell_details["Area"];
+                    }
+                    $out[$casting_time][$spell_name]['Tags'] = implode(", ", $tags);
+
+                    $out[$casting_time][$spell_name]['Description'] = $spell_details["Short Description"];
+                }
+            }
+        }
+
+        return view("character_sheet", ["out"=>$out]);
     }
 }
