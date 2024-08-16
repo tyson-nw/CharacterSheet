@@ -168,6 +168,7 @@
         "Title":"Sneak Attack",
         "Tier":1,
         "Archetype":"Rogue",
+        "Short Description": "Exploit to deal additional 2D6",
         "Description" : "As an Action, Exploit a foe by making a Weapons Roll to deal weapon damage and an additional 2d6. ",
         "{{Weapon}}" : {
             "Description" : "Exploit to deal additional 2D6",
@@ -405,14 +406,15 @@
         "Description" : "Small creatures can Stride 5 spaces. Small creatures gain Full Cover when standing behind a Medium sized or larger creature.",
         "Stride"  : "Move 5 spaces."
     },
-    "Human-Coordinated" : {
-        "Title": "Coordinated",
+    "Human-Coordination" : {
+        "Title": "Coordination",
         "Ancestry" : "Human",
         "Description" : "Humans can move half their Speed when performing a Maneuver that doesn't include movement.",
         "Bonus" : {
-            "Description" : "Move 3 spaces.",
-            "Manuvers" : {
-                "Stride" : 3
+            "Maneuvers" : {
+                "Description" : "Move 3 spaces.",
+                "Stride" : 3,
+                "Movement" : false
             }
         }
     },
