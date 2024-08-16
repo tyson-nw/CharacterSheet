@@ -60,7 +60,7 @@ class CharacterSheetController extends Controller
         $out["Responses"] = ["Movement Response" => "Make a melee attack when a target leaves a threatened square."];
 
         $weapon_actions = [];
-        foreach ($character["Equipment"] as $equip=>$count){
+        foreach (array_keys($character["Equipment"]) as $equip){
             
             if (isset($weapons_model->data[$equip])){
                 $action = array();
@@ -224,10 +224,10 @@ class CharacterSheetController extends Controller
                             $out["Maneuvers"][$title]["Vs"] = $curr_feature["Maneuver"]["Vs"];
                         }
 
-                        $out["Maneuvers"][$title]["Description"] = $curr_feature["Maneuver"]["Description"];
-                        if(str_contains($curr_feature["Maneuver"]["Description"], "{{subfeatures}}")){
-                            $curr_feature["Maneuver"]["Description"] = str_replace("{{subfeatures}}", implode(", ", $out["Subfeatures"][$curr_feature["Title"]]), $curr_feature["Maneuver"]["Description"]);
+                        if(str_contains($curr_feature["Maneuver"]["Description"], "{{Subfeatures}}")){
+                            $curr_feature["Maneuver"]["Description"] = str_replace("{{Subfeatures}}", implode(", ", $out["Subfeatures"][$curr_feature["Title"]]), $curr_feature["Maneuver"]["Description"]);
                         }
+                        $out["Maneuvers"][$title]["Description"] = $curr_feature["Maneuver"]["Description"];
                     }
                     if(isset($curr_feature["Maneuver"]["Description"])){
                         $out["Features"][$curr_feature["Title"]]["Description"] = $curr_feature["Maneuver"]["Description"];
@@ -242,10 +242,6 @@ class CharacterSheetController extends Controller
                             $stride = 5;
                         }
                         $out["Features"][$curr_feature["Title"]]["Description"] = str_replace("{{Stride}}" , $stride,$out["Features"][$curr_feature["Title"]]["Description"]);
-                    }
-                    
-                    if(str_contains($out["Features"][$curr_feature["Title"]]["Description"], "{{Subfeatures}}")){
-                        $out["Features"][$curr_feature["Title"]]["Description"] = str_replace("{{Subfeatures}}" , implode(", ", $out["Subfeatures"][$curr_feature["Title"]] ),$out["Features"][$curr_feature["Title"]]["Description"]);
                     }
 
                 }elseif(isset($curr_feature["Interaction"])){ //done
