@@ -1,6 +1,6 @@
 div.page {
-    height: 792px;
-    width: 612px;
+    height: 1000px;
+    width: 800px;
     break-after:page;
     border-style: solid;
     border-width: 1px;
@@ -9,7 +9,6 @@ div.page {
 
 div.columns{
     column-count: 2;
-    column-width: 265px;
     column-gap: 10px;
     break-after: page;
     width: 100%;
@@ -152,4 +151,8 @@ div.section strong{
 
 div.spell{
     break-inside: avoid;
+}
+
+div.columns h3, div.columns h4{
+    margin-top: 0;
 }
