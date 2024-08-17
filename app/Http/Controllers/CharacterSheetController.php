@@ -413,7 +413,7 @@ class CharacterSheetController extends Controller
                 if(is_array($bonus)){
                     if($target == "Maneuvers"){
                         foreach ($out["Maneuvers"] as $title=>$value){
-                            if($value["Movement"] == false && $bonus["Movement"] == false){
+                            if(isset($value["Movement"]) && $value["Movement"] == false && $bonus["Movement"] == false){
                                 if(!isset($out["Maneuvers"][$title]["Description"])){
                                     $out["Maneuvers"][$title]["Description"] = "";
                                 }
