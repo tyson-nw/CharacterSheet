@@ -29,8 +29,7 @@ class CharacterSheetController extends Controller
             "Treasure" => $character["Treasure"],
         );
 
-        if(isset($out["Expertises"]["Bows"])){
-            unset($out["Expertises"]["Bows"]);
+        if(isset($out["Expertises"]["Skilled Hunter"])){
             $out["Expertises"]["Longbow"] = true;
             $out["Expertises"]["Shortbow"] = true;
         }
