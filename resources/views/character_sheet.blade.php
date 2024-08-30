@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <link rel="stylesheet" href="/css/character_sheet.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" media="screen" href="/css/screen.css" />
+        <link rel="stylesheet" media="print" href="/css/print.css" />
+
+        
     </head>
 
     <body>

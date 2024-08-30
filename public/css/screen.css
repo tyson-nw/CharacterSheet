@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*padding: 50px; */
+    background-color: #3c3c3b;
+}
+
+div.page {
+    height: 11in;
+    width: 8.25in;
+    margin: .25in;
+    break-after: page;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.438);
+    background-color: white;
+}
+
+div.columns{
+    max-height: 10.5in;
+    max-width: 7.75in;
+    margin: .25in;
+
+    column-count: 2;
+    column-gap: .1in;
+    break-after: page;
+    width: 100%;
+    height: 100%;
+    column-fill: auto;
+}
+
+h2 {
+    margin-left: .25in;
+}
