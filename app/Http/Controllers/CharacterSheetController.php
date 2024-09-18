@@ -327,6 +327,16 @@ class CharacterSheetController extends Controller
             }
         }
 
+        /**
+         * Add Equipment actions
+         */
+        $out["Equipment"] = $character["Equipment"];
+
+
+        /**
+         * Add Treasure actions
+         */
+        $out["Treasure"] = $character["Treasure"];
 
         /**
          * Add Spells

@@ -248,6 +248,22 @@
                         @endforeach                    
                     </ul>
                 </div>
+                <div id="Equipment" class="section">
+                <strong>Equipment:</strong>
+                    <ul style="column-count: 2;">
+                        @foreach($out['Equipment'] as $name=>$count)
+                            <li>{{$name}} @if($count>1)x{{$count}}@endif
+                        @endforeach
+                    </ul>
+                </div>
+                <div id="Treasure" class="section">
+                <strong>Treasure:</strong>
+                    <ul>
+                        @foreach($out['Treasure'] as $name=>$count)
+                            <li>{{$name}} @if($count>1){{$count}}@endif
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="page">
